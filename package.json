@@ -1,6 +1,6 @@
 {
-  "name": "porter-legacy",
-  "homepage": "https://garyahill.github.io/PorterLegacy",
+  "name": "porter-legacy-group",
+  "homepage": "https://garyahill.github.io/PorterLegacyGroup",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.tsx",

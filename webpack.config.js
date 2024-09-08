@@ -21,7 +21,7 @@ let config = {
         filename: "[name].[contenthash].js",
         chunkFilename: "[name].[contenthash].js",
         clean: true, // cleans the output folder before building
-        publicPath: isProduction ? "/PorterLegacy/" : "/",
+        publicPath: isProduction ? "/PorterLegacyGroup/" : "/",
     },
 
     mode: isProduction ? "production" : "development",
