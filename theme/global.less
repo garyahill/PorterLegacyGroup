@@ -1,0 +1,59 @@
+@import "~normalize.css/normalize.css";
+@import "./palette.less";
+
+@font-face { font-family: "VogaMedium"; src: url("./fonts/Voga-Medium.otf") format("truetype"); }
+@font-face { font-family: "CovesBold"; src: url("./fonts/Coves-Bold.otf") format("truetype"); }
+@font-face { font-family: "CovesLight"; src: url("./fonts/Coves-Light.otf") format("truetype"); }
+
+// TODO: Do we need paid versions of the fonts?
+// https://www.myfonts.com/products/medium-voga-148150/ (need to figure out pay for comm version)
+// info: https://www.myfonts.com/collections/voga-font-cdtype?tab=licensing#section_Webfonts
+// https://www.dafontfree.io/coves-font-free/ (need to figure out pay for comm version)
+
+
+/* General Styles */
+html, body {
+  height: 100%;
+}
+
+body {
+    font-family: "CovesBold"; //, Arial, sans-serif;
+    background-color: @white-bg;
+    color: @primary-text-black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+  
+.link-styles() {
+    text-decoration: none;
+    //&:hover { }
+}
+
+a {
+.link-styles()
+}
+
+// .link {
+//     color:;
+// }
+
+/* Buttons */
+button {
+cursor: pointer;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+font-size: 1em;
+}
+
+.button-primary {
+// TODO: Yhese variabled dont exist yet
+// background-color: @primary-button-bg;
+// color: @primary-button-text;
+margin-top: 10px;
+
+// TODO: Yhese variabled dont exist yet
+// &:hover { }
+}

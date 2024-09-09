@@ -1,14 +1,21 @@
+@import "../theme/global.less";
+
 body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% auto;
-    background-color: hsl(275, 100%, 97%);
-  }
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-color: hwb(276 94% 0%);
+}
   
-  .app-container {
-    display: flex;
-    flex-direction: row;     /* This prop defines the main axis (row is the default) */
-    justify-content: center; /* This prop aligns items on the main axis */
-    align-items: flex-end;   /* This prop aligns items on the cross axis */
+.app-container {
+  //TODO: This is a temporary
+  h4 {
+    font-family: "CovesBold";
   }
+
+  display: flex;
+  flex-direction: row;     /* This prop defines the main axis (row is the default) */
+  justify-content: center; /* This prop aligns items on the main axis */
+  align-items: flex-end;   /* This prop aligns items on the cross axis */
+}
   
