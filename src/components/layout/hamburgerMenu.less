@@ -1,0 +1,70 @@
+@import "../../theme/palette.less";
+
+.hamburger-menu {
+
+    .hamburger-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 20px;
+
+        span {
+            background-color: white;
+            height: 3px;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.open {
+            span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+    }
+
+    /* Position the navbar fixed relative to the page, not the header */
+    .hamburger-navbar {
+        position: fixed;
+        top: 96px;
+        right: 0;
+        background-color: @green-bg;
+        width: 100vw;
+        z-index: 1000;
+        transition: max-height 0.3s ease-in-out;
+        max-height: 0; /* Hides the navbar by default - works with the transition*/
+        
+        ul {
+            list-style: none;
+            padding-left: 10px;
+            margin: 0;
+
+            li {
+                margin: 10px 0;
+                font-size: 1.25em;
+                font-family: "CovesBold";
+
+                a {
+                    color: @primary-text-white;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: @primary-tan;
+                    }
+                }
+            }
+        }
+
+        &.open {
+            max-height: calc(100vh - 96px);
+        }
+    }
+}

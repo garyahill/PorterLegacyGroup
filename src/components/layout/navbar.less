@@ -1,0 +1,33 @@
+@import "../../theme/palette.less";
+
+.navbar {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+        
+      li {
+        margin-left: 20px;
+        font-size: 1.25em;
+        font-family: "CovesBold";
+      }
+  
+      a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          text-decoration: none;
+          color: @primary-tan;
+        }
+      }
+    }
+  }

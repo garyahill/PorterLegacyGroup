@@ -1,0 +1,40 @@
+@import "~normalize.css/normalize.css";
+@import "./palette.less";
+
+@font-face { font-family: "VogaMedium"; src: url("./fonts/Voga-Medium.otf") format("truetype"); }
+@font-face { font-family: "CovesBold"; src: url("./fonts/Coves-Bold.otf") format("truetype"); }
+@font-face { font-family: "CovesLight"; src: url("./fonts/Coves-Light.otf") format("truetype"); }
+
+/* General Styles */
+html, body {
+  height: 100%;
+}
+
+/* Ensures that the root element takes up the full height */
+.root-style {
+  height: 100%;
+}
+
+body {
+    font-family: "CovesLight", "Arial", "Roboto", "Sans-Serif", "Helvetica";
+    background-color: @white-bg;
+    color: @primary-text-black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1em;
+}

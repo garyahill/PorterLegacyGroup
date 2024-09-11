@@ -1,18 +1,63 @@
-@import "../../../theme/palette.less";
-@import "../../../theme/global.less";
+@import "../../theme/palette.less";
 
-.main-header-container {
-
-    width: 100%;
+.header-container {
     background-color: @green-bg;
     
-    .flex-container {
+    h1 {
         font-family: "VogaMedium";
         font-size: 2.5rem;
-        display: flex;
-        justify-content: space-evenly;
-        color: @primary-text-white;
-        margin: 20px;
+        font-weight: 100;
     }
 
+    img {
+        width: 37px;
+        height: 42px;
+        margin: 25px 15px 25px 0;
+    }
+    
+    .flex-container {
+        display: flex;
+        align-items: center; /* Vertically centers items within the container */
+        position: relative;  /* Allows positioning the navbar relative to the flex container */
+        justify-content: space-between;
+        padding: 0 20px;
+        color: @primary-text-white;
+        
+        .title {
+            display: flex;
+        }
+    }
+
+
+}
+
+/* Styles for tablets and above */
+@media(min-width: 768px) {
+
+}
+
+/* Laptop and smaller desktop */
+@media(min-width: 1025px) {
+    .header-container {
+        .flex-container {
+            justify-content: space-between;
+            .navbar {
+                display: block;
+            }
+            .hamburger-menu {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Larger desktops */
+@media(min-width: 1441px) {
+
+    .header-container {
+
+        .flex-container {
+            justify-content: center;
+        }
+    }
 }
