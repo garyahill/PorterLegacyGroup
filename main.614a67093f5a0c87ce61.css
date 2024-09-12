@@ -14,9 +14,7 @@
 .header-container .flex-container {
   display: flex;
   align-items: center;
-  /* Vertically centers items within the container */
   position: relative;
-  /* Allows positioning the navbar relative to the flex container */
   justify-content: space-between;
   padding: 0 20px;
   color: #ffffff;
@@ -105,14 +103,15 @@
   background-color: #172f25;
   width: 100vw;
   z-index: 1000;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
   max-height: 0;
-  /* Hides the navbar by default - works with the transition*/
 }
 .hamburger-menu .hamburger-navbar ul {
   list-style: none;
-  padding-left: 10px;
-  margin: 0;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  transition: visibility 0.4s ease-in-out;
+  visibility: hidden;
 }
 .hamburger-menu .hamburger-navbar ul li {
   margin: 10px 0;
@@ -129,6 +128,9 @@
 }
 .hamburger-menu .hamburger-navbar.open {
   max-height: calc(100vh - 96px);
+}
+.hamburger-menu .hamburger-navbar.open ul {
+  visibility: visible;
 }
 
 .layout-container {
@@ -244,4 +246,4 @@ button {
 }
 
 
-/*# sourceMappingURL=main.d67932fa2d560061023c.css.map*/
+/*# sourceMappingURL=main.614a67093f5a0c87ce61.css.map*/
