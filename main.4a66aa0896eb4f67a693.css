@@ -50,6 +50,7 @@
   display: none;
 }
 .navbar ul {
+  font-size: 0.85rem;
   display: flex;
   list-style: none;
   padding: 0;
@@ -107,6 +108,7 @@
   max-height: 0;
 }
 .hamburger-menu .hamburger-navbar ul {
+  font-size: 0.85rem;
   list-style: none;
   padding-left: 20px;
   margin-bottom: 20px;
@@ -154,7 +156,7 @@
   align-items: center;
 }
 
-.philosophy-container {
+.faq-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,4 +248,4 @@ button {
 }
 
 
-/*# sourceMappingURL=main.614a67093f5a0c87ce61.css.map*/
+/*# sourceMappingURL=main.4a66aa0896eb4f67a693.css.map*/
