@@ -29,7 +29,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({linkItems}) => {
 					{linkItems.map((item, index) => (
 						<li key={index}>
 							<Link to={item.to}>
-							  <span onClick={() => setIsOpen(!isOpen)}>{item.text}</span>
+							  <span onClick={() => setIsOpen(!isOpen)}>{item.text.toUpperCase()}</span>
 							</Link>
 						</li>
 					))}

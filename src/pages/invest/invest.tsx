@@ -4,7 +4,7 @@ import "./invest.less";
 const Invest: React.FC = () => {
 
 	return (
-		<div className="home-container">
+		<div className="invest-container">
 			Invest Page - Coming Soon!
 		</div>
 	);

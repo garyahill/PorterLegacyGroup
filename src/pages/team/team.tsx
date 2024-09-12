@@ -4,7 +4,7 @@ import "./team.less";
 const Team: React.FC = () => {
 
 	return (
-		<div className="home-container">
+		<div className="team-container">
 			Team Page - Coming Soon!
 		</div>
 	);

@@ -13,7 +13,7 @@ const Navbar: React.FC<HamburgerMenuProps> = ({linkItems}) => {
 			<ul>
 				{linkItems.map((item, index) => (
 					<li key={index}>
-						<Link to={item.to}>{item.text}</Link>
+						<Link to={item.to}>{item.text.toUpperCase()}</Link>
 					</li>
 				))}
 			</ul>

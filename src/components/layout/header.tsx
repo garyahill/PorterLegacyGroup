@@ -9,13 +9,12 @@ export type LinkItem = {
 	text: string;
 };
 
-
 const Header: React.FC = () => {
 
 	const items: ReadonlyArray<LinkItem> = [
 		{ to: "/", text: "Home" },
 		{ to: "/team", text: "Our Team" },
-		{ to: "/philosophy", text: "Philosophy" },
+		{ to: "/faq", text: "FAQ" },
 		{ to: "/invest", text: "Invest with Us" },
 	];
 
