@@ -167,6 +167,7 @@
   text-align: center;
   font-size: 2rem;
   font-weight: 100;
+  margin-bottom: 30px;
 }
 /* Styles for tablets and above */
 /* Laptop and smaller desktop */
@@ -188,7 +189,7 @@
   padding-left: 10px;
   justify-content: space-between;
   border: solid 2px #e6e6e6;
-  background-color: #e6e6e680;
+  background-color: #e6e6e6;
   /* Horizontal bar */
   /* Vertical bar */
 }
@@ -330,4 +331,4 @@ button {
 }
 
 
-/*# sourceMappingURL=main.90ff547c57c82af4beb0.css.map*/
+/*# sourceMappingURL=main.7345042251d8855d4cf2.css.map*/
