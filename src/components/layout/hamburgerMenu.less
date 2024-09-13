@@ -34,7 +34,7 @@
     .hamburger-navbar {
         position: fixed;
         top: 96px;
-        right: 0;
+        left: 0;
         background-color: @green-bg;
         width: 100vw;
         z-index: 1000;
@@ -42,9 +42,10 @@
         max-height: 0;
         
         ul {
+            left: -20px;
+            position: relative;
             font-size: .85rem;
             list-style: none;
-            padding-left: 20px;
             margin-bottom: 20px;
             transition: visibility 0.4s ease-in-out;
             visibility: hidden;
@@ -57,7 +58,7 @@
                 a {
                     color: @primary-text-white;
                     text-decoration: none;
-                    transition: color 0.3s ease;
+                    transition: color 0.1s ease;
 
                     &:hover {
                         color: @primary-tan;
