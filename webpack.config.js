@@ -60,7 +60,8 @@ let config = {
         // TODO: Add CopyWebpackPlugin to copy images to the build directory
         new CopyWebpackPlugin({
             patterns: [
-              { from: "./src/images/favicon.png", to: "favicon.png" }, // Copy favicon to the build directory
+                { from: "./src/images/favicon.png", to: "favicon.png" }, // Copy favicon to the build directory
+                { from: "./src/404.html", to: "404.html" }, // TODO: Handle different in production environment
             ],
           }),
         // new BundleAnalyzerPlugin(),
