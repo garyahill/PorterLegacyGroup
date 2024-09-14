@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "rootDir": "../src",
+        "outDir": "../dist/",
+        "noImplicitAny": true,
+        // TODO: Consider changing to settings below before production for wider support
+        // "module": "es6",
+        // "target": "es5",
+        "module": "esnext",
+        "target": "es6",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+     },
+     "include": [
+        "../src/**/*",
+        "../src/typings/**/*",
+    ],
+     "exclude": ["../node_modules"]
+}

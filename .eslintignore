@@ -5,3 +5,4 @@ jest.config.js
 webpack.config.js
 test-setup.js
 styleguide.config.js
+webpack/*.js
