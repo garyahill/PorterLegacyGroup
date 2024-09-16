@@ -17,6 +17,7 @@ html, body {
 
 body {
     font-family: "CovesLight", "Arial", "Roboto", "Sans-Serif", "Helvetica";
+    font-size: 1.05rem;
     background-color: @white-bg;
     color: @primary-text-black;
     margin: 0;
@@ -28,6 +29,16 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+}
+
+a {
+  color: @primary-text-white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: @primary-tan;
+  }
 }
 
 /* Buttons */

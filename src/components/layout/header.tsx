@@ -1,8 +1,8 @@
 import * as React from "react";
 import "./header.less";
 import Navbar from "./navbar";
-import logo from "../../images/logo-white-no-background.png";
 import HamburgerMenu from "./hamburgerMenu";
+import logo from "../../images/logo-white-no-background.png";
 
 export type LinkItem = {
 	to: string;

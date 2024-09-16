@@ -1,0 +1,105 @@
+@import "../../theme/palette.less";
+
+.footer-container {
+    background-color: @green-bg;
+    min-height: 100px;
+    color: @primary-text-white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+    font-size: 1.1rem;
+
+    .flex-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+
+        .footer-logo {
+            display: flex;           
+            margin-top: 30px;
+            order: 2;
+
+            img {
+                object-fit: contain;
+                width: 150px;
+            }
+        }
+
+        .footer-contact {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 10px;
+            order: 1;
+        
+            h4 {
+              margin: 0 0 10px 0;
+              font-size: 1.25rem;
+              color: @primary-text-white;
+            }
+        
+            address {
+              font-style: normal;
+              line-height: 1.25;
+              margin-bottom: 15px;
+        
+              span {
+                display: block;
+                margin-bottom: 5px;
+              }
+            }
+        
+            p {
+              margin: 0;
+        
+              a {
+                display: block;
+              }
+      
+              a:first-child {
+                  margin-bottom: 5px;
+              }
+            }
+          
+            .copyright {
+              font-size: 1.25rem;
+              margin-top: 20px;
+          
+              .symbol {
+                display: inline-block;
+                position: relative;
+                top: 4px;
+                font-size: 1.6rem;
+              }
+            }
+        }
+    }
+
+}
+  
+
+/* Styles for tablets and above */
+@media(min-width: 768px) {
+    .footer-container {
+            text-align: left;
+            
+            .flex-container {
+                flex-direction: row;
+                justify-content: center;
+
+            .footer-logo {
+                margin-top: 0;
+                margin-right: 25px;
+                order: 1;
+            }
+
+            .footer-contact {
+                margin-top: 0;
+                margin-left: 10px;
+                order: 2;
+            }
+        }
+    }
+}
+

@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./header";
+import Footer from "./footer";
 import "./layout.less";
 
 const Layout: React.FC = () => {
@@ -10,6 +11,7 @@ const Layout: React.FC = () => {
 			<main className="page-content">
 				<Outlet />
 			</main>
+			<Footer />
 		</div>
 	);
 }
