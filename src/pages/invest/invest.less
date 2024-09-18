@@ -1,5 +1,47 @@
+@import "../../theme/palette.less";
+
 .invest-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+  
+    @media (min-width: 768px) {
+      width: 50%;  // Shrink container to 50% on larger screens
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      label,
+      input,
+      select,
+      button {
+        width: 100%;  // Make form elements take full container width
+        margin-bottom: 15px;
+      }
+  
+      input,
+      select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+  
+      button {
+        padding: 10px;
+        background-color: @grey-bg;
+        color: @primary-text-white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: darken(@tan-bg, 10%);
+      }
+    }
+  }
