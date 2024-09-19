@@ -1,47 +1,93 @@
 @import "../../theme/palette.less";
+@import "../../theme/mixins.less";
 
 .invest-container {
     width: 90%;
     padding: 20px;
     margin: 0 auto;
-  
+
+    h1 {
+        .content-page-title-h1();
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .info-section {
+            margin-bottom: 20px;
+            
+            h2 {
+              .aside-header-h2();
+              margin-top: 0;         
+            }
+      
+            aside {
+              font-size: 1rem;
+              line-height: 1.5;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+            input,
+            select,
+            button {
+              width: 100%;
+              margin-bottom: 15px; // TODO: Remove margin from last element?
+            }
+
+            label {
+              width: 100%;
+              margin-bottom: 5px;
+            }
+        
+            input,
+            select {
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              box-sizing: border-box;
+              font-size: 1rem;
+            }
+        
+            button {
+              margin-top: 10px;
+            }
+        }
+    }
+
     @media (min-width: 768px) {
-      width: 50%;  // Shrink container to 50% on larger screens
+        .flex-container {
+            flex-direction: row;
+
+            form {
+              flex: 2;
+              
+              button {
+                width: 150px;
+                align-self: flex-end;
+              }
+          }
+  
+          .info-section {
+              flex: 2;
+              margin-right: 30px;
+          }
+        }
     }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      label,
-      input,
-      select,
-      button {
-        width: 100%;  // Make form elements take full container width
-        margin-bottom: 15px;
-      }
-  
-      input,
-      select {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1rem;
-      }
-  
-      button {
-        padding: 10px;
-        background-color: @grey-bg;
-        color: @primary-text-white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-      }
-  
-      button:hover {
-        background-color: darken(@tan-bg, 10%);
-      }
+
+    @media(min-width: 1025px) {
+      width: 80%;
     }
+    
+    /* Larger desktops */
+    @media(min-width: 1441px) {
+      width: 70%;
+    }
+
   }
