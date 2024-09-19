@@ -1,5 +1,6 @@
 import React from "react";
 import "./invest.less";
+import logo from "../../images/logo-secondary-no-background.png";
 
 const Invest: React.FC = () => {
 
@@ -11,6 +12,9 @@ const Invest: React.FC = () => {
 				<div className="info-section">
 					<h2>About Our Investment Program</h2>
 					<aside>We are committed to implementing our strategy with diligence and transparency, and look forward to partnering with investors who share our long-term vision. Learn more about our process and how we can help you grow.</aside>
+					<div className="image-container">
+						<img src={logo} alt="logo" />
+					</div>
 				</div>
 
 				<form>

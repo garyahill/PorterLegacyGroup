@@ -27,6 +27,11 @@
               font-size: 1rem;
               line-height: 1.5;
             }
+
+            .image-container {
+                display: none;
+            }
+            
         }
 
         form {
@@ -38,7 +43,7 @@
             select,
             button {
               width: 100%;
-              margin-bottom: 15px; // TODO: Remove margin from last element?
+              margin-bottom: 15px;
             }
 
             label {
@@ -72,22 +77,61 @@
                 width: 150px;
                 align-self: flex-end;
               }
-          }
+            }
   
-          .info-section {
+            .info-section {
               flex: 2;
               margin-right: 30px;
-          }
+
+              .image-container {
+                display: flex;
+                margin-top: 40px;
+
+                img {
+                  position: relative;
+                  width: 75%;
+                }
+              }             
+            }
         }
     }
 
     @media(min-width: 1025px) {
       width: 80%;
+
+      .flex-container {
+      
+          .info-section {
+
+              .image-container {
+      
+                img {
+                  position: relative;
+                  width: 65%;
+                }
+              }             
+          }
+      }
+
     }
     
     /* Larger desktops */
     @media(min-width: 1441px) {
       width: 70%;
+
+      .flex-container {
+        
+          .info-section {
+
+              .image-container {
+      
+                  img {
+                    position: relative;
+                    width: 60%;
+                  }
+              }             
+          }
+      }
     }
 
   }
