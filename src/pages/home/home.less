@@ -1,6 +1,102 @@
+@import "../../theme/palette.less";
+@import "../../theme/mixins.less";
+
 .home-container {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    .banner {
+        background-image: url('../../images/building-white-background-darker-trans-70.jpeg');
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.9);
+
+        ::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+              linear-gradient(to right, white, rgba(255, 255, 255, 0) 20px),
+              linear-gradient(to left, white, rgba(255, 255, 255, 0) 20px),
+              linear-gradient(to bottom, white, rgba(255, 255, 255, 0) 30px),
+              linear-gradient(to top, white, rgba(255, 255, 255, 0) 20px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            width: 90%;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+
+
+    .mission {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        width: 90%;
+        align-self: center;
+
+        h2 {
+            .aside-header-h2();
+            margin-bottom: 0;
+            text-align: center;
+        }
+        p {
+            font-size: 1.3em;
+            font-weight: 100;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .banner {
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @media(min-width: 1025px) {
+        .banner {
+            h1 {
+                font-size: 1.5rem;
+                width: 80%;
+            }
+        }
+  
+        .mission {
+            width: 80%;
+        }
+    }
+    
+    /* Larger desktops */
+    @media(min-width: 1441px) {
+        .banner {
+            h1 {
+                width: 70%;
+            }
+        }
+  
+        .mission {
+            width: 70%;
+        }
+    }
 }
+
 
