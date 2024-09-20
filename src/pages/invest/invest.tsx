@@ -18,18 +18,18 @@ const Invest: React.FC = () => {
 				</div>
 
 				<form>
-					<label htmlFor="name">Full Name<span className="required">&nbsp;*</span></label>
+					<label htmlFor="name">Full Name<span className="required">*</span></label>
 					<input type="text" id="name" name="name" placeholder="Your Name" required />
 
-					<label htmlFor="email">Email Address<span className="required">&nbsp;*</span></label>
+					<label htmlFor="email">Email Address<span className="required">*</span></label>
 					<input type="email" id="email" name="email" placeholder="Your Email" required />
 
-					<label htmlFor="phone">Phone Number<span className="required">&nbsp;*</span></label>
+					<label htmlFor="phone">Phone Number<span className="required">*</span></label>
 					<input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
 
-					<label htmlFor="experience">Investor Experience Level<span className="required">&nbsp;*</span></label>
-					<select id="experience" name="experience" required>
-						<option value="" disabled selected>Select Experience Level</option>
+					<label htmlFor="experience">Investor Experience Level<span className="required">*</span></label>
+					<select id="experience" name="experience" required defaultValue="">
+						<option value="" disabled>Select Experience Level</option>
 						<option value="beginner">Beginner</option>
 						<option value="intermediate">Intermediate</option>
 						<option value="advanced">Advanced</option>

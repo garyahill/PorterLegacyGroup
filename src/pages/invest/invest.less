@@ -8,6 +8,7 @@
 
     h1 {
         .content-page-title-h1();
+        margin-bottom: 40px;
     }
 
     .flex-container {
@@ -20,11 +21,11 @@
             
             h2 {
               .aside-header-h2();
-              margin-top: 0;         
+              margin-top: 0;    
             }
       
             aside {
-              font-size: 1.2rem;
+              font-size: 1.3rem;
               line-height: 1.5;
             }
 
@@ -38,6 +39,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            top: -7px;
         
             input,
             select,
@@ -48,12 +51,14 @@
 
             label {
               width: 100%;
-              margin-bottom: 5px;
+              //margin-bottom: 5px;
 
               .required {
                 color: red;
-                font-size: 2rem;
-                position: fixed;
+                vertical-align: middle;
+                font-size: 2em;
+                line-height: normal;
+                margin-left: 5px;
               }
             }
         
