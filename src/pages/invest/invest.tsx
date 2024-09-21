@@ -1,8 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./invest.less";
-import logo from "../../images/logo-secondary-no-background.png";
+import getInvestmentWithUsText from "../../data/invest";
+
+type FormData = {
+	name: string;
+	email: string;
+	phone: string;
+	experience: string;
+};
 
 const Invest: React.FC = () => {
+	const [formData, setFormData] = useState<FormData>({
+		name: "",
+		email: "",
+		phone: "",
+		experience: "",
+	});
+
+	const { InvestmentProgramText, GoogleScriptsWebAppUrl } = getInvestmentWithUsText();
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const response = await fetch(GoogleScriptsWebAppUrl, {
+		  method: 'POST',
+		  body: new URLSearchParams(formData),
+		  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		});
+		const result = await response.text();
+		// eslint-disable-next-line no-console
+		console.log(result);  // Should log 'Success'
+	  };
+
+	// Handle input changes
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+		const { name, value } = e.target;
+		setFormData((prevState) => ({
+			...prevState,
+			[name]: value,
+		}));
+	};
 
 	return (
 		<div className="invest-container">
@@ -11,24 +47,56 @@ const Invest: React.FC = () => {
 			<div className="flex-container">
 				<div className="info-section">
 					<h2>About Our Investment Program</h2>
-					<aside>We are committed to implementing our strategy with diligence and transparency, and look forward to partnering with investors who share our long-term vision. Learn more about our process and how we can help you grow.</aside>
-					<div className="image-container">
-						<img src={logo} alt="logo" />
-					</div>
+					<aside>
+						{ InvestmentProgramText }
+					</aside>
 				</div>
 
-				<form>
+				<form onSubmit={handleSubmit}>
 					<label htmlFor="name">Full Name<span className="required">*</span></label>
-					<input type="text" id="name" name="name" placeholder="Your Name" required />
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Your Name"
+						value={formData.name}
+						onChange={handleChange}
+						required
+					/>
 
-					<label htmlFor="email">Email Address<span className="required">*</span></label>
-					<input type="email" id="email" name="email" placeholder="Your Email" required />
+					<label htmlFor="email">Email Address<span className="required">*</span>
+					</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Your Email"
+						value={formData.email}
+						onChange={handleChange}
+						required
+					/>
 
-					<label htmlFor="phone">Phone Number<span className="required">*</span></label>
-					<input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+					<label htmlFor="phone">Phone Number<span className="required">*</span>
+					</label>
+					<input
+						type="tel"
+						id="phone"
+						name="phone"
+						placeholder="Your Phone Number"
+						value={formData.phone}
+						onChange={handleChange}
+						required
+					/>
 
-					<label htmlFor="experience">Investor Experience Level<span className="required">*</span></label>
-					<select id="experience" name="experience" required defaultValue="">
+					<label htmlFor="experience">Investor Experience Level<span className="required">*</span>
+					</label>
+					<select
+						id="experience"
+						name="experience"
+						value={formData.experience}
+						onChange={handleChange}
+						required
+					>
 						<option value="" disabled>Select Experience Level</option>
 						<option value="beginner">Beginner</option>
 						<option value="intermediate">Intermediate</option>
@@ -39,11 +107,7 @@ const Invest: React.FC = () => {
 					<button type="submit">Submit</button>
 				</form>
 			</div>
-
-
-
 		</div>
-
 	);
 };
 
