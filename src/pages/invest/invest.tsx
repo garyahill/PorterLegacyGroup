@@ -1,37 +1,41 @@
-import React, { useState } from "react";
-import "./invest.less";
+import React, { useState, useEffect } from "react";
 import getInvestmentWithUsText from "../../data/invest";
-
-type FormData = {
-	name: string;
-	email: string;
-	phone: string;
-	experience: string;
-};
+import { FormData } from "../../models";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import "./invest.less";
 
 const Invest: React.FC = () => {
-	const [formData, setFormData] = useState<FormData>({
-		name: "",
-		email: "",
-		phone: "",
-		experience: "",
-	});
-
+	const [formData, setFormData] = useState<FormData>({name: "", email: "", phone: "", experience: ""});
+	const [isSubmitting, setIsSubmitting] = useState(false);
 	const { InvestmentProgramText, GoogleScriptsWebAppUrl } = getInvestmentWithUsText();
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		const response = await fetch(GoogleScriptsWebAppUrl, {
-		  method: 'POST',
-		  body: new URLSearchParams(formData),
-		  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		});
-		const result = await response.text();
-		// eslint-disable-next-line no-console
-		console.log(result);  // Should log 'Success'
-	  };
+		setIsSubmitting(true);
 
-	// Handle input changes
+		try {
+			const response = await fetch(GoogleScriptsWebAppUrl, {
+				method: "POST",
+				body: new URLSearchParams(formData),
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			});
+
+			const result = await response.text();
+
+			if (result === "Success") {
+				toast.success("Thank you, We'll be in touch soon!");
+			} else {
+				toast.error("Sorry, there was a problem submitting your information.");
+			}
+		} catch (error) {
+			toast.error("An error occurred during submission.");
+		} finally {
+			setIsSubmitting(false);
+			setFormData({ name: "", email: "", phone: "", experience: "" });
+		}
+	};
+
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 		const { name, value } = e.target;
 		setFormData((prevState) => ({
@@ -104,9 +108,19 @@ const Invest: React.FC = () => {
 						<option value="accredited">Accredited</option>
 					</select>
 
-					<button type="submit">Submit</button>
+					<button type="submit" disabled={isSubmitting}>
+						{isSubmitting ? "Submitting..." : "Submit"}
+					</button>
+
 				</form>
 			</div>
+
+			<ToastContainer
+				position="bottom-right"
+				autoClose={5000}
+				hideProgressBar={true}
+			/>
+
 		</div>
 	);
 };
