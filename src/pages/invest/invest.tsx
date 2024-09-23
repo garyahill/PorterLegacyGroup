@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import getInvestmentWithUsText from "../../data/invest";
 import { FormData } from "../../models";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./invest.less";
 
 const Invest: React.FC = () => {
-	const [formData, setFormData] = useState<FormData>({name: "", email: "", phone: "", experience: ""});
+	const [formData, setFormData] = useState<FormData>({Name: "", Email: "", Phone: "", Experience: ""});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const { InvestmentProgramText, GoogleScriptsWebAppUrl } = getInvestmentWithUsText();
 
@@ -32,7 +32,7 @@ const Invest: React.FC = () => {
 			toast.error("An error occurred during submission.");
 		} finally {
 			setIsSubmitting(false);
-			setFormData({ name: "", email: "", phone: "", experience: "" });
+			setFormData({ Name: "", Email: "", Phone: "", Experience: "" });
 		}
 	};
 
@@ -63,7 +63,7 @@ const Invest: React.FC = () => {
 						id="name"
 						name="name"
 						placeholder="Your Name"
-						value={formData.name}
+						value={formData.Name}
 						onChange={handleChange}
 						required
 					/>
@@ -75,7 +75,7 @@ const Invest: React.FC = () => {
 						id="email"
 						name="email"
 						placeholder="Your Email"
-						value={formData.email}
+						value={formData.Email}
 						onChange={handleChange}
 						required
 					/>
@@ -87,7 +87,7 @@ const Invest: React.FC = () => {
 						id="phone"
 						name="phone"
 						placeholder="Your Phone Number"
-						value={formData.phone}
+						value={formData.Phone}
 						onChange={handleChange}
 						required
 					/>
@@ -97,7 +97,7 @@ const Invest: React.FC = () => {
 					<select
 						id="experience"
 						name="experience"
-						value={formData.experience}
+						value={formData.Experience}
 						onChange={handleChange}
 						required
 					>

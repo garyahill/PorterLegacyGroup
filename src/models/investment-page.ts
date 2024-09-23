@@ -4,8 +4,8 @@ export type InvestmentPageData = {
 }
 
 export type FormData = {
-	name: string;
-	email: string;
-	phone: string;
-	experience: string;
+	Name: string;
+	Email: string;
+	Phone: string;
+	Experience: string;
 };

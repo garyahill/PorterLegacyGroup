@@ -9,7 +9,7 @@
     flex-direction: column;
 
     .banner {
-        background-image: url('../../images/building-white-background-darker-trans-70.jpeg');
+        background-image: url('../../images/building-white-background.jpeg');
         background-size: cover;
         background-position: center;
         height: 250px;
@@ -34,29 +34,29 @@
             z-index: 1;
             pointer-events: none;
         }
-
-        h1 {
-            font-size: 1.3rem;
-            width: 90%;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 0;
-        }
     }
 
+    h1 {
+        font-size: 1.3rem;
+        width: 90%;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        .section-header-h2();
+        margin-bottom: 0;
+        text-align: center;
+    }
 
     .mission {
         display: flex;
         flex-direction: column;
         margin-top: 30px;
-        width: 90%;
+        width: 100%;
         align-self: center;
 
-        h2 {
-            .aside-header-h2();
-            margin-bottom: 0;
-            text-align: center;
-        }
         p {
             font-size: 1.3em;
             font-weight: 100;
@@ -64,39 +64,72 @@
         }
     }
 
-    @media (min-width: 768px) {
-        .banner {
-            h1 {
-                font-size: 1.3rem;
-            }
+    .why-invest, .strategy {
+
+        .title{
+            width: 100%;
+            margin: 20px 0;
         }
     }
 
-    @media(min-width: 1025px) {
+}
+
+// Laptops
+@media(min-width: 1025px) {
+    .home-container {
+        width: 80%;
+
         .banner {
             h1 {
                 font-size: 1.5rem;
-                width: 80%;
             }
         }
-  
-        .mission {
-            width: 80%;
+
+        .strategy {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-    }
-    
-    /* Larger desktops */
-    @media(min-width: 1441px) {
-        .banner {
-            h1 {
-                width: 70%;
+          
+        .strategy .section-card-container {
+            width: calc(50% - 15px);
+            margin-bottom: 30px; 
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+            h2 {
+                height: 55px;
+                text-align: center;
             }
-        }
-  
-        .mission {
-            width: 70%;
+
+            .section-text {
+                text-align: center;
+                margin-bottom: 18px;
+            }
         }
     }
 }
 
+/* Larger desktops */
+@media (min-width: 1441px) {
+    .home-container {
+        width: 70%;
+
+        .strategy .section-card-container {
+            width: calc(50% - 15px);
+            margin-bottom: 30px;
+            flex-direction: row;
+            justify-content: unset;
+            h2 {
+                height: 55px;
+                text-align: left;
+            }
+
+            .section-text {
+                text-align: left;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
 
