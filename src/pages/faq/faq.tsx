@@ -1,5 +1,5 @@
 import React from "react";
-import GetFaqData from "../../data/faqData";
+import GetFaqData from "../../data/faq";
 import "./faq.less";
 import FaqList from "./components/faqList";
 
