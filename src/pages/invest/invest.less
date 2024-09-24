@@ -19,15 +19,15 @@
 
         .info-section {
             margin-bottom: 20px;
-            
+
             h2 {
-              .aside-header-h2();
-              margin-top: 0;    
+                .aside-header-h2();
+                margin-top: 0;
             }
-      
+
             aside {
-              font-size: 1.3rem;
-              line-height: 1.5;
+                font-size: 1.3rem;
+                line-height: 1.5;
             }
         }
 
@@ -37,38 +37,90 @@
             align-items: center;
             position: relative;
             top: -7px;
-        
+
             input,
             select,
             button {
-              width: 100%;
-              margin-bottom: 15px;
+                width: 100%;
+                margin-bottom: 15px;
             }
 
             label {
-              width: 100%;
-              font-size: 1.3rem;
+                width: 100%;
+                font-size: 1.3rem;
 
-              .required {
-                color: red;
-                vertical-align: middle;
-                font-size: 2em;
-                line-height: normal;
-                margin-left: 5px;
-              }
+                .required {
+                    color: @error-red;
+                    vertical-align: middle;
+                    font-size: 2em;
+                    line-height: normal;
+                    margin-left: 5px;
+                }
             }
-        
+
+            /* Radio buttons */
+            .radio-group {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 5px;
+
+                .radio-button-pair {
+                  display: flex;
+                  align-items: baseline;
+                  margin-bottom: 5px;
+                  position: relative;
+                  left: 15px;
+
+                  input[type="radio"] {
+                    width: 20px;
+                    transform: scale(1.35);
+                    margin-right: 10px;
+                  }
+
+                  label {
+                    font-size: 1.2rem;
+                  }
+                }
+            }
+
+            /* Checkboxes */
+            .checkbox-group {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              margin: 14px 0 5px 0;
+          
+                .check-box-pair {
+                    display: flex;
+                    align-items: baseline;
+                    margin-bottom: 5px;
+                    position: relative;
+                    left: 15px;
+            
+                    input[type="checkbox"] {
+                        width: 20px;
+                        transform: scale(1.35);
+                        margin-right: 10px;
+                    }
+            
+                    label {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
             input,
             select {
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 5px;
-              box-sizing: border-box;
-              font-size: 1rem;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                font-size: 1rem;
             }
-        
+
             button {
-              margin-top: 10px;
+                margin-top: 10px;
             }
         }
     }
@@ -79,42 +131,39 @@
             gap: 12%;
 
             form {
-              flex: 2;
-              
-              button {
-                width: 150px;
-                align-self: flex-end;
-              }
+                flex: 2;
+
+                button {
+                    width: 150px;
+                    align-self: flex-end;
+                }
             }
-  
+
             .info-section {
-              flex: 2;
+                flex: 2;
             }
         }
     }
 
     .Toastify__toast--success {
-      background-color: @white-bg;
-      border: 1px solid @accent-grey-dark;
-      color: @primary-text-black;
-      font-size: 1.1em;
+        background-color: @white-bg;
+        border: 1px solid @accent-grey-dark;
+        color: @primary-text-black;
+        font-size: 1.1em;
     }
-    
+
     .Toastify__toast--error {
-      background-color: @white-bg;
-      border: 1px solid @accent-grey-dark;
-      color: @primary-text-black;
-      font-size: 1.1rem;
+        background-color: @white-bg;
+        border: 1px solid @accent-grey-dark;
+        color: @primary-text-black;
+        font-size: 1.1rem;
     }
 
     @media(min-width: 1025px) {
-      width: 80%;
+        width: 80%;
     }
-    
-    /* Larger desktops */
+
     @media(min-width: 1441px) {
-      width: 70%;      
+        width: 70%;
     }
-
 }
-

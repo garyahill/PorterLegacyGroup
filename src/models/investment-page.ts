@@ -7,5 +7,6 @@ export type FormData = {
 	Name: string;
 	Email: string;
 	Phone: string;
-	Experience: string;
+	Accredited: string;
+  	Experience: string[];
 };
