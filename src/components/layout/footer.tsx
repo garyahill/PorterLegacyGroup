@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 						<span>San Francisco, CA 94110</span>
 					</address>
 					<p>
-						<a href="tel:+1234567890">Phone: +1.415.216.6575</a>
+						<a href="tel:+14152166575">Phone: +1.415.216.6575</a>
 						<a href="mailto:info@porterlegacygroup.com">Email: info@porterlegacy.com</a>
 					</p>
 
