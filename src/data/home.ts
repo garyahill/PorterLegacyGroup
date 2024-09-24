@@ -18,7 +18,7 @@ export default function getHomePageData(): HomePageData {
 
 	// Why Invest with Us
 	const WhyInvestWithUs = {
-		Title: "Why Invest with Us in Multi-Family Real Estate",
+		Title: "Why Invest with Us?",
 		Sections: [] as HomePageSection[],
 	};
 

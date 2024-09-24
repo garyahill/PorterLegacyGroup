@@ -9,30 +9,24 @@
     flex-direction: column;
 
     .banner {
-        background-image: url('../../images/building-white-background.jpeg');
+        border: solid 3px @tan-bg;
+        background-image: url('../../images/building-main.jpg');
         background-size: cover;
         background-position: center;
-        height: 250px;
+        height: 450px;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.9);
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 0 0 0 6px @green-bg;
+        width: calc(100% - 5px);
+        box-sizing: border-box;
 
-        ::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-              linear-gradient(to right, white, rgba(255, 255, 255, 0) 20px),
-              linear-gradient(to left, white, rgba(255, 255, 255, 0) 20px),
-              linear-gradient(to bottom, white, rgba(255, 255, 255, 0) 30px),
-              linear-gradient(to top, white, rgba(255, 255, 255, 0) 20px);
-            z-index: 1;
-            pointer-events: none;
+
+        .banner-title {
+            font-size: 2rem;
         }
     }
 
@@ -42,12 +36,14 @@
         font-weight: bold;
         text-align: center;
         margin-bottom: 0;
+        color: @primary-text-white;
     }
 
     h2 {
         .section-header-h2();
         margin-bottom: 0;
         text-align: center;
+        font-weight: bold;
     }
 
     .mission {
@@ -56,11 +52,23 @@
         margin-top: 30px;
         width: 100%;
         align-self: center;
+        box-sizing: border-box;
+        margin: 60px 0 50px 0;
+        padding: 10px;
+        background-color: @accent-grey;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Drop shadow */
+
+
+        h2 {
+            font-weight: bold;
+        }
 
         p {
             font-size: 1.3em;
             font-weight: 100;
-            text-align: center;
+            text-align: center;  
+            margin-bottom: 30px;          
         }
     }
 
@@ -68,10 +76,24 @@
 
         .title{
             width: 100%;
-            margin: 20px 0;
+            margin: 20px 0 25px;
         }
     }
 
+    .why-invest {
+        margin-bottom: 30px;
+    }
+
+}
+
+/* Styles for tablets and above */
+@media(min-width: 768px) {
+    .home-container {
+
+        .mission {
+            padding: 10px 50px 10px 50px;
+        }
+    }
 }
 
 // Laptops
@@ -83,6 +105,10 @@
             h1 {
                 font-size: 1.5rem;
             }
+        }
+
+        .mission {
+            padding: 10px 100px 10px 100px;
         }
 
         .strategy {
@@ -115,6 +141,10 @@
     .home-container {
         width: 70%;
 
+        .mission {
+            padding: 10px 225px 10px 225px;
+        }
+        
         .strategy .section-card-container {
             width: calc(50% - 15px);
             margin-bottom: 30px;

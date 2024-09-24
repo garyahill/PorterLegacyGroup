@@ -15,6 +15,7 @@ const Home: React.FC = () => {
 	return (
 		<div className="home-container">
 			<div className="banner">
+				<h1 className="banner-title">PLG Institutional Real Estate</h1>
 				<h1>{Tagline}</h1>
 			</div>
 

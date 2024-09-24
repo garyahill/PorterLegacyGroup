@@ -1,11 +1,12 @@
 import React from "react";
+import ryan from "../../images/ryan.jpg";
 import "./team.less";
 
 const Team: React.FC = () => {
 
 	return (
 		<div className="team-container">
-			Team Page - Coming Soon!
+			<img src={ryan} alt="" />
 		</div>
 	);
 };
