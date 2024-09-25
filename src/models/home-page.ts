@@ -4,7 +4,6 @@ export type HomePageSection = {
 };
 
 export type HomePageData = {
-	Mission: string;
 	WhyInvestWithUs: {
 		Title: string;
 		Sections: ReadonlyArray<HomePageSection>;

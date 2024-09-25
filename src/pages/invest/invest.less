@@ -12,12 +12,10 @@
     .info-section {
         margin-bottom: 30px;
         align-self: center;
-
-        h2 {
-            .section-header-h2();
-            margin-top: 0;
-            text-align: center;
-        }
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Center the content within */
+        flex-direction: column; 
 
         p {
             font-size: 1.3rem;
@@ -27,22 +25,34 @@
     }
 
     .form-container {
-        //background-color: @accent-grey;
         align-self: center;
-        border-radius: 8px;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        border-radius: 8px;
 
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
-            margin: 0px 20px;
             align-self: center;
+            width: auto;
+
+            .form-group {
+                display: flex;
+                flex-direction: column; /* Ensure vertical stacking */
+                width: 100%; /* Make sure the form group spans full width */
+                margin-bottom: 15px;
+
+                label,
+                input {
+                    width: 100%; /* Ensure inputs and labels take full width */
+                    box-sizing: border-box; /* Make sure padding and borders don't affect width */
+                }
+            }
 
             input {
                 width: 100%;
@@ -71,7 +81,7 @@
 
             button {
                 margin: 15px 0 15px;
-                width: 295px;
+                width: 100%;
                 align-self: center;
             }
 
@@ -90,13 +100,15 @@
                     left: 15px;
 
                     input[type="radio"] {
-                    width: 20px;
-                    transform: scale(1.35);
-                    margin-right: 10px;
+                        width: 20px;
+                        transform: scale(1.35);
+                        margin-right: 10px;
                     }
 
                     label {
-                    font-size: 1.2rem;
+                        font-size: 1.2rem;
+                        position: relative;
+                        top: -4px;
                     }
                 }
             }
@@ -123,6 +135,8 @@
             
                     label {
                         font-size: 1.2rem;
+                        position: relative;
+                        top: -4px;
                     }
                 }
             }
@@ -150,12 +164,16 @@
             width: 80%;
         }
 
+        .form-container {
+            padding: 30px 10px 0 30px;  
+        }
+
+
         .form-container form {
             button {
                 margin: 15px 0 15px;
-                width: 100%;
-                max-width: 400px;
-                align-self: flex-start;
+                align-self: center;
+                margin: 20px 30px 20px 0;
             }
         }
     }
@@ -163,15 +181,46 @@
     // Laptops
     @media(min-width: 1025px) {
         .info-section, .form-container {
-            width: 60%;
+            width: 70%;
         }
 
+        .form-container {
+            background-color: @accent-grey-50-percent;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping if needed */
+            flex-direction: row; /* Display form groups side by side */
+            justify-content: flex-end; /* Ensure even spacing between groups */
+            align-items: flex-start;
+            width: 100%; /* Ensure form takes full width */
+
+            /* Updated for div-based layout */
+            .form-group {
+                flex: 1;
+                margin-right: 50px; /* Add space between form groups */
+                max-width: 45%; /* Limit width to ensure groups fit side by side */
+            }
+
+            .form-group:last-child {
+                margin-right: 15px; /* Remove margin for the last form group */
+            }
+
+            button {
+                margin: 15px 0 15px;
+                width: 250px;
+                align-self: flex-end;
+                margin: 20px 10px 20px 0;
+            }
+            
+        }
     }
 
     // Larger desktops
     @media(min-width: 1441px) {
         .info-section, .form-container {
-            width: 50%;
+            width: 60%;
         }
     }
 }

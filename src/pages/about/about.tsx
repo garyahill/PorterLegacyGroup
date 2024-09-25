@@ -3,14 +3,14 @@ import getTeamPageData from "../../data/team";
 import TeamCard from "./components/team-card";
 import ryan from "../../images/ryan-porter.jpg";
 import gary from "../../images/gary-hill.jpg";
-import "./team.less";
+import "./about.less";
 
 const Team: React.FC = () => {
 	const { PageTitle, Sections } = getTeamPageData();
 	const teamImages = [ryan, gary];
 
 	return (
-		<div className="team-container">
+		<div className="about-container">
 			<h1>{ PageTitle }</h1>
 
 			<div className="team-member-container">

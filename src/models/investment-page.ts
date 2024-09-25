@@ -3,7 +3,7 @@ export type InvestmentPageData = {
 	InvestmentProgramText: string;
 }
 
-export type FormData = {
+export type InvestmentFormData = {
 	Name: string;
 	Email: string;
 	Phone: string;

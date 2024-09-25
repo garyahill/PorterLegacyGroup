@@ -1,6 +1,6 @@
 @import "../../theme/mixins.less";
 
-.team-container {
+.about-container {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -11,15 +11,15 @@
 
     .team-member-container {
         display: flex;
-        flex-wrap: wrap; /* Allow wrapping if needed */
-        justify-content: center; /* Center the team members horizontally */
-        align-items: center; /* Align team members vertically */
-        width: 100%; /* Ensure container takes full width */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     // Laptop and smaller desktop
     @media(min-width: 1025px) {
-        width: 80%; /* Ensure the container doesn't take too much space on larger screens */
+        width: 80%;
     }
 
     // Larger desktops

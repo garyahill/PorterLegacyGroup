@@ -5,14 +5,10 @@ import checkmark from "../../images/icon-large-checkmark.png";
 import "./home.less";
 
 const Home: React.FC = () => {
-	const { Mission, WhyInvestWithUs } = getHomePageData();
+	const { WhyInvestWithUs } = getHomePageData();
 
 	return (
 		<div className="home-container">
-			<div className="mission">
-				<h2>Our Mission</h2>
-				<p>{Mission}</p>
-			</div>
 
 			<div className="why-invest">
 				<h2 className="title">{WhyInvestWithUs.Title}</h2>

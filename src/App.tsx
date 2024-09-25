@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/layout";
 import Home from "./pages/home/home";
 import Strategy from "./pages/strategy/strategy";
-import Team from "./pages/team/team";
+import About from "./pages/about/about";
 import Faq from "./pages/faq/faq";
 import Invest from "./pages/invest/invest";
 import LoadingSpinner from "./components/controls/loading";
@@ -20,7 +20,7 @@ function App() {
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Home />} />
 						<Route path="strategy" element={<Strategy />} />
-						<Route path="team" element={<Team />} />
+						<Route path="about" element={<About />} />
 						<Route path="faq" element={<Faq />} />
 						<Route path="invest" element={<Invest />} />
 					</Route>

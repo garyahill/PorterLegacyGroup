@@ -3,12 +3,6 @@ import { HomePageData, HomePageSection } from "../models";
 export default function getHomePageData(): HomePageData {
 	let builder: string[] = [];
 
-	// Mission
-	builder = [];
-	builder.push("Our mission is to excel in the acquisition, renovation, lease, and divestiture of multifamily properties, ");
-	builder.push("ensuring consistent returns for investors and building strong relationships with partners in the communities in which we operate.");
-	const Mission = builder.join("");
-
 	// Why Invest with Us
 	const WhyInvestWithUs = {
 		Title: "Why Invest with Us?",
@@ -56,7 +50,6 @@ export default function getHomePageData(): HomePageData {
 	});
 
 	return {
-		Mission,
 		WhyInvestWithUs,
 	} as HomePageData;
 }

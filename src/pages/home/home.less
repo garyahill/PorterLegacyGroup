@@ -14,32 +14,7 @@
         font-weight: bold;
     }
 
-    .mission {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
-        width: 100%;
-        align-self: center;
-        box-sizing: border-box;
-        margin: 60px 0 50px 0;
-        padding: 10px;
-        background-color: @accent-grey;
-        border-radius: 8px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Drop shadow */
-
-        h2 {
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 1.3em;
-            font-weight: 100;
-            text-align: center;  
-            margin-bottom: 30px;          
-        }
-    }
-
-    // testing fonts
+    // TODO: Testing fonts - Remove later
     section:nth-of-type(1) {
         font-family: "CovesLight";
     }
@@ -75,39 +50,20 @@
 
 /* Styles for tablets and above */
 @media(min-width: 768px) {
-    .home-container {
-        .mission {
-            padding: 10px 50px 10px 50px;
-        }
-    }
+
 }
 
 // Laptops
-@media(min-width: 1025px) {
-    .banner {
-        h1 {
-            font-size: 1.5rem;
-        }
-    }
-    
+@media(min-width: 1025px) {    
     .home-container {
         width: 80%;
-
-        .mission {
-            padding: 10px 100px 10px 100px;
-        }   
     }
 }
 
 /* Larger desktops */
 @media (min-width: 1441px) {
     .home-container {
-        width: 70%;
-
-        .mission {
-            padding: 10px 225px 10px 225px;
-        }       
-       
+        width: 70%;      
     }
 }
 

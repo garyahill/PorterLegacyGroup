@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./header.less";
 import Navbar from "./navbar";
-import HamburgerMenu from "./hamburgerMenu";
+import HamburgerMenu from "./hamburger-menu";
 import logo from "../../images/logo-white-no-background.png";
 
 export type LinkItem = {
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 	const items: ReadonlyArray<LinkItem> = [
 		{ to: "/", text: "Home" },
 		{ to: "/strategy", text: "Our Strategy" },
-		{ to: "/team", text: "Our Team" },
+		{ to: "/about", text: "About Us" },
 		{ to: "/faq", text: "FAQ" },
 		{ to: "/invest", text: "Invest with Us" },
 	];

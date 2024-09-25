@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 import { LinkItem } from './header';
-import "./hamburgerMenu.less";
+import "./hamburger-menu.less";
 
 interface HamburgerMenuProps {
 	linkItems: ReadonlyArray<LinkItem>;
