@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/layout";
 import Home from "./pages/home/home";
+import Strategy from "./pages/strategy/strategy";
 import Team from "./pages/team/team";
 import Faq from "./pages/faq/faq";
 import Invest from "./pages/invest/invest";
@@ -18,6 +19,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Home />} />
+						<Route path="strategy" element={<Strategy />} />
 						<Route path="team" element={<Team />} />
 						<Route path="faq" element={<Faq />} />
 						<Route path="invest" element={<Invest />} />

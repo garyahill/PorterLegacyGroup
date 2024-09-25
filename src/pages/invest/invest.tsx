@@ -74,12 +74,13 @@ const Invest: React.FC = () => {
 		<div className="invest-container">
 			<h1>Invest with Us</h1>
 
-			<div className="flex-container">
-				<div className="info-section">
-					<h2>About Our Investment Program</h2>
-					<aside>{InvestmentProgramText}</aside>
-				</div>
 
+			<div className="info-section">
+				<h2>About Our Investment Program</h2>
+				<p>{InvestmentProgramText}</p>
+			</div>
+
+			<div className="form-container">
 				<form onSubmit={handleSubmit}>
 					<label htmlFor="name">Full Name<span className="required">*</span></label>
 					<input
@@ -166,6 +167,7 @@ const Invest: React.FC = () => {
 					</button>
 				</form>
 			</div>
+
 
 			<ToastContainer
 				position="bottom-right"

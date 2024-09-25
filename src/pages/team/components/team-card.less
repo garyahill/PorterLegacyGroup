@@ -1,7 +1,7 @@
 @import "../../../theme/palette.less";
 @import "../../../theme/mixins.less";
 
-.section-card-container {
+.team-card-container {
   display: flex;
   box-sizing: border-box;
   width: 100%;
@@ -19,14 +19,18 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 20px 10px 0;      
+        margin: 0 10px 15px 10px;      
     }
 
     .section-title {
         .section-header-h2();
         text-align: center;
         margin-top: 10px;
-     }
+    }
+
+    .section-subtitle {
+        .section-header-h3()
+    }
 
     .section-text {
         line-height: 1.5;
@@ -39,11 +43,20 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
+        border-radius: 8px;
     }
 
     .section-logo {
         height: 180px;
         object-fit: contain; /* Maintain aspect ratio */
+        border-radius: 8px;
+    }
+
+    // Tablets
+    @media (min-width: 768px) {
+        .text-container {
+            margin: 0 20px 15px 20px;
+        }
     }
 
     // Laptops
@@ -63,7 +76,7 @@
         }
 
         .text-container {
-            margin: 0 20px 0px;
+            margin: 0 20px 0px 20px;
         }
     }
 

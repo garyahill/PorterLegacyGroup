@@ -3,13 +3,6 @@ import { HomePageData, HomePageSection } from "../models";
 export default function getHomePageData(): HomePageData {
 	let builder: string[] = [];
 
-	// Tagline
-	builder.push("Porter Legacy is a private, multifamily (MF) real estate investment firm focused on workforce housing in ");
-	builder.push("the Dallas-Fort Worth (DFW) area and the State of Texas. We provide carefully curated investment opportunities ");
-	builder.push("that offer risk-adjusted, monthly cash flow and capital appreciation with significant tax-advantages for individual ");
-	builder.push("accredited and institutional investors.");
-	const Tagline = builder.join("");
-
 	// Mission
 	builder = [];
 	builder.push("Our mission is to excel in the acquisition, renovation, lease, and divestiture of multifamily properties, ");
@@ -62,45 +55,8 @@ export default function getHomePageData(): HomePageData {
 		ContentText: builder.join(""),
 	});
 
-    	// Our Strategy
-	const Strategy = {
-		Title: "Our Strategy",
-		Sections: [] as HomePageSection[],
-	};
-
-	builder = [];
-	builder.push("Acquire Class B & C \"value-add\" apartment buildings in the State of Texas, preferably in the Dallas-Fort Worth (DFW). ");
-	builder.push("Then, Invest in the property and its amenities through capital improvements.");
-	Strategy.Sections.push({
-		Title: "Invest & Add-Value",
-		ContentText: builder.join(""),
-	});
-
-	Strategy.Sections.push({
-		Title: "Increase Income & Occupancy",
-		ContentText: "After renovations and improvements, we seek to maintain or achieve 95% occupancy and 95% market rents within 36 months.",
-	});
-
-	builder = [];
-	builder.push("During the hold period, we seek to pay investors 9% monthly preferred returns with an additional goal of returning investor capital prior to selling. ");
-	builder.push("Investors will maintain their equity position in the asset and continue to earn preferred returns until divestiture.");
-	Strategy.Sections.push({
-		Title: "Pay Investor Preferred Returns & Equity",
-		ContentText: builder.join(""),
-	});
-
-	builder = [];
-	builder.push("Once the property has been stabilized our goal is to hold for about 5 years providing income for our partners. ");
-	builder.push("After the hold period the asset will be sold with investors earning double digit Internal Rate of Returns.");
-	Strategy.Sections.push({
-		Title: "Operate and Divest",
-		ContentText: builder.join(""),
-	});
-
 	return {
-		Tagline,
 		Mission,
 		WhyInvestWithUs,
-		Strategy,
 	} as HomePageData;
 }

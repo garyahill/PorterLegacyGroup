@@ -2,50 +2,11 @@
 @import "../../theme/mixins.less";
 
 .home-container {
-    width: 90%;
     padding: 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-
-    .banner {
-        border: solid 3px @tan-bg;
-        background-image: url('../../images/building-main.jpg');
-        background-size: cover;
-        background-position: center;
-        min-height: 450px;
-        height: auto; 
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 8px;
-        box-shadow: 0 0 0 6px @green-bg;
-        width: calc(100% - 5px);
-        box-sizing: border-box;
-        margin-top: 15px;
-
-
-        .banner-title {
-            font-size: 2rem;
-            margin-top: 15px;
-        }
-
-        h1 {
-            margin-bottom: 15px;
-        }
-    }
-
-    h1 {
-        font-size: 1.3rem;
-        width: 90%;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 0;
-        color: @primary-text-white;
-    }
-
+    
     h2 {
         .section-header-h2();
         margin-bottom: 0;
@@ -66,7 +27,6 @@
         border-radius: 8px;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Drop shadow */
 
-
         h2 {
             font-weight: bold;
         }
@@ -79,16 +39,36 @@
         }
     }
 
-    .why-invest, .strategy {
+    // testing fonts
+    section:nth-of-type(1) {
+        font-family: "CovesLight";
+    }
 
+    section:nth-of-type(2) {
+        font-family: "Verdana";
+        font-size: 1.1rem;
+    }
+
+    section:nth-of-type(3) {
+        font-family: "Roboto";
+    }
+
+    section:nth-of-type(4) {
+        font-family: "Open Sans";
+
+    }
+
+    section:nth-of-type(5) {
+        font-family: "Merriweather";
+    }
+
+
+    .why-invest {
+        margin-bottom: 30px;
         .title{
             width: 100%;
             margin: 20px 0 25px;
         }
-    }
-
-    .why-invest {
-        margin-bottom: 30px;
     }
 
 }
@@ -96,7 +76,6 @@
 /* Styles for tablets and above */
 @media(min-width: 768px) {
     .home-container {
-
         .mission {
             padding: 10px 50px 10px 50px;
         }
@@ -105,41 +84,18 @@
 
 // Laptops
 @media(min-width: 1025px) {
+    .banner {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+    
     .home-container {
         width: 80%;
 
-        .banner {
-            h1 {
-                font-size: 1.5rem;
-            }
-        }
-
         .mission {
             padding: 10px 100px 10px 100px;
-        }
-
-        .strategy {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-          
-        .strategy .section-card-container {
-            width: calc(50% - 15px);
-            margin-bottom: 30px; 
-            flex-direction: column-reverse;
-            justify-content: space-between;
-
-            h2 {
-                height: 55px;
-                text-align: center;
-            }
-
-            .section-text {
-                text-align: center;
-                margin-bottom: 18px;
-            }
-        }
+        }   
     }
 }
 
@@ -150,23 +106,8 @@
 
         .mission {
             padding: 10px 225px 10px 225px;
-        }
-        
-        .strategy .section-card-container {
-            width: calc(50% - 15px);
-            margin-bottom: 30px;
-            flex-direction: row;
-            justify-content: unset;
-            h2 {
-                height: 55px;
-                text-align: left;
-            }
-
-            .section-text {
-                text-align: left;
-                margin-bottom: 10px;
-            }
-        }
+        }       
+       
     }
 }
 

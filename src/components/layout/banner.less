@@ -1,0 +1,47 @@
+@import "../../theme/palette.less";
+
+.banner {
+    background-image: url('../../images/building-main.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .banner-title {
+        font-size: 2rem;
+        margin-top: 15px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        width: 90%;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+        color: @primary-text-white;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            width: 80%;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        h1 {
+            width: 70%;
+        }
+    }
+
+    @media (min-width: 1441px) {
+        h1 {
+            width: 60%;
+        }
+    }
+}

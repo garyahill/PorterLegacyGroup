@@ -13,6 +13,7 @@ const Header: React.FC = () => {
 
 	const items: ReadonlyArray<LinkItem> = [
 		{ to: "/", text: "Home" },
+		{ to: "/strategy", text: "Our Strategy" },
 		{ to: "/team", text: "Our Team" },
 		{ to: "/faq", text: "FAQ" },
 		{ to: "/invest", text: "Invest with Us" },

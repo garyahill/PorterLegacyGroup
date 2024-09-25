@@ -1,0 +1,74 @@
+@import "../../theme/mixins.less";
+
+.strategy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    width: 100%; /* Ensure container takes full width */
+    text-align: center; /* Center text within the container */
+    margin: auto;
+
+    h1 {
+        .content-page-title-h1();
+        text-align: center; /* Ensure the title is centered */
+        width: 100%; /* Take full width for better alignment */
+    }
+
+    .section-card-container {
+        background-color: @accent-grey;
+    }
+
+}
+
+// Laptops
+@media(min-width: 1025px) {
+    .strategy-container {
+        width: 80%;
+
+        .strategy {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+          
+        .strategy .section-card-container {
+            width: calc(50% - 15px);
+            margin-bottom: 30px; 
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+            h2 {
+                height: 55px;
+                text-align: center;
+            }
+
+            .section-text {
+                text-align: center;
+                margin-bottom: 18px;
+            }
+        }
+    }
+}
+
+/* Larger desktops */
+@media (min-width: 1441px) {
+    .strategy-container {
+        width: 70%;
+       
+        .strategy .section-card-container {
+            width: calc(50% - 15px);
+            margin-bottom: 30px;
+            flex-direction: row;
+            justify-content: unset;
+            h2 {
+                height: 55px;
+                text-align: left;
+            }
+
+            .section-text {
+                text-align: left;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
