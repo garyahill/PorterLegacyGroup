@@ -10,7 +10,7 @@ export default function getHomePageData(): HomePageData {
 	};
 
 	builder = [];
-	builder.push("Now is an ideal time to acquire multifamily assets in DFW and Texas due to rising construction costs, increasing rental demand, and lower valuations (down 30%) caused by higher ");
+	builder.push("Now is an ideal time to acquire multifamily assets in DFW and Texas due to rising construction costs, increasing rental demand, and lower valuations (down 30<span class='special-character'>%</span>) caused by higher ");
 	builder.push("interest rates and a surge in new units. Population growth is absorbing new units quickly, and once the supply surge ends in Q4 2025, both valuations and rental income are expected to rise significantly.");
 	WhyInvestWithUs.Sections.push({
 		Title: "MultiFamily",
@@ -34,8 +34,8 @@ export default function getHomePageData(): HomePageData {
 	});
 
 	builder = [];
-	builder.push("Improving multifamily properties through renovations or added amenities boosts investor equity by raising rental income and paying down debt. Multifamily real estate typically offers higher risk-adjusted returns (12-18%) ");
-	builder.push("than the S&P 500 (8-9%), with less volatility and lower correlation to the stock market.");
+	builder.push("Improving multifamily properties through renovations or added amenities boosts investor equity by raising rental income and paying down debt. Multifamily real estate typically offers higher risk-adjusted returns ");
+	builder.push("(12-18<span class='special-character'>%</span>) than the S&P 500 (8-9<span class='special-character'>%</span>), with less volatility and lower correlation to the stock market.");
 	WhyInvestWithUs.Sections.push({
 		Title: "Capital Appreciation",
 		ContentText: builder.join(""),

@@ -6,8 +6,7 @@ export function getMainImageBannerText(): BannerItem {
 	builder.push("Porter Legacy is a private, multifamily (MF) real estate investment firm focused on workforce ");
 	builder.push("housing in the Dallas-Fort Worth (DFW) area and the State of Texas. We provide carefully curated ");
 	builder.push("investment opportunities that offer risk-adjusted, monthly cash flow and capital appreciation with ");
-	builder.push("significant tax advantages. Our mission is to excel in the acquisition, renovation, lease,");
-	builder.push("");
+	builder.push("significant tax advantages");
 
 	const MainImageBanner = {
 		Title: "Institutional Real Estate",

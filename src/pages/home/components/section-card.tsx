@@ -15,7 +15,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ title, content, logo }) => {
 			</div>
 			<div className="text-container">
 				<h2 className={"section-title"}>{title}</h2>
-				<p className="section-text">{content}</p>
+				<p className="section-text" dangerouslySetInnerHTML={{ __html: content }}></p>
 			</div>
 		</section>
 	);
