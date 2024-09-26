@@ -4,11 +4,9 @@
         "rootDir": "../src",
         "outDir": "../dist/",
         "noImplicitAny": true,
-        // TODO: Consider changing to settings below before production for wider support
-        // "module": "es6",
-        // "target": "es5",
-        "module": "esnext",
-        "target": "es6",
+        // wider support
+        "module": "es6", // "module": "esnext",
+        "target": "es5", // "target": "es6",
         "jsx": "react",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,

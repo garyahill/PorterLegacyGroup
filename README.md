@@ -1,4 +1,4 @@
 # Porter Legacy Group Application
 React, TypeScript, Less Application
 
-#TODO - Write a real readme
+#Brochure-ware site for Porter Legacy Group
