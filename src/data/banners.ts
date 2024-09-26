@@ -9,7 +9,7 @@ export function getMainImageBannerText(): BannerItem {
 	builder.push("significant tax advantages");
 
 	const MainImageBanner = {
-		Title: "Institutional Real Estate",
+		Title: "Private Equity Real Estate",
 		Tagline: builder.join(""),
 	};
 

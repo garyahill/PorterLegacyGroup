@@ -1,8 +1,9 @@
 import { InvestmentPageData } from "../models";
 
-export default function getInvestmentWithUsText(): InvestmentPageData {
+export default function getInvestmentPageData(): InvestmentPageData {
 	const builder: string[] = [];
 
+	const PageTitle = "Invest with Us";
 	const GoogleScriptsWebAppUrl = "https://script.google.com/macros/s/AKfycby9TXFCuWJ4WpnjUeN2Gh8_3RYIuTdkJxCC24QIJSWDyY01G7tjASCrinxVtmkcC0Qg/exec";
 
 	builder.push("We are committed to implementing our strategy with diligence and transparency. ");
@@ -11,6 +12,7 @@ export default function getInvestmentWithUsText(): InvestmentPageData {
 	const InvestmentProgramText = builder.join("");
 
 	return {
+		PageTitle,
 		GoogleScriptsWebAppUrl,
 		InvestmentProgramText,
 	};

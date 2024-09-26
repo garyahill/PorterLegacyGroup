@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import getInvestmentWithUsText from "../../data/invest";
+import getInvestmentPageData from "../../data/invest";
 import { InvestmentFormData } from "../../models";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,7 @@ import "./invest.less";
 const Invest: React.FC = () => {
 	const [formData, setFormData] = useState<InvestmentFormData>(getNewFormDate());
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	const { InvestmentProgramText, GoogleScriptsWebAppUrl } = getInvestmentWithUsText();
+	const { PageTitle, InvestmentProgramText, GoogleScriptsWebAppUrl } = getInvestmentPageData();
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -37,42 +37,35 @@ const Invest: React.FC = () => {
 			setIsSubmitting(false);
 			setFormData(getNewFormDate);
 		}
-
 	  };
-
 
 	  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 		const { name, value, type } = e.target;
 
-		// Only check for 'checked' if the input type is checkbox
 		const checked = type === "checkbox" ? (e.target as HTMLInputElement).checked : false;
 
 		setFormData((prevState) => {
 		  if (type === "checkbox") {
-			// For checkboxes, toggle the value in the array
 				const newRealEstateExperience = checked
-					? [...prevState.Experience, value] // Add if checked
-					: prevState.Experience.filter((item) => item !== value); // Remove if unchecked
+					? [...prevState.Experience, value]
+					: prevState.Experience.filter((item) => item !== value);
 
 				return {
 					...prevState,
 					Experience: newRealEstateExperience,
 				};
 		  } else {
-				// For other input types (text, email, phone, radio, select)
 				return {
 					...prevState,
-					[name]: value, // Update the value for text, email, phone, etc.
+					[name]: value,
 				};
 		  }
 		});
 	  };
 
-
-
 	return (
 		<div className="invest-container">
-			<h1>Invest with Us</h1>
+			<h1>{ PageTitle }</h1>
 
 
 			<div className="info-section">

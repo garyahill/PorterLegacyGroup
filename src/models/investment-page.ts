@@ -1,4 +1,5 @@
 export type InvestmentPageData = {
+	PageTitle: string;
 	GoogleScriptsWebAppUrl: string;
 	InvestmentProgramText: string;
 }

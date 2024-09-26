@@ -7,11 +7,10 @@ type MissionBannerProps = {
 };
 
 const MissionBanner: React.FC<MissionBannerProps> = ({ bannerItem = {} }) => {
-	const { Title, Tagline } = bannerItem;
+	const { Tagline } = bannerItem;
 
 	return (
 		<div className="mission-container">
-			<h1 className="banner-title">{Title}</h1>
 			<h1>{Tagline}</h1>
 		</div>
 	);

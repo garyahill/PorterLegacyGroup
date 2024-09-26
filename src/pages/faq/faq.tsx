@@ -10,8 +10,8 @@ const FAQ: React.FC = () => {
 	return (
 		<div className="faq-container">
 			<div className="faq-list">
-				<h1>Investor Frequently Asked Questions</h1>
-				<FaqList faqs={faqs} />
+				<h1>{ faqs.PageTitle}</h1>
+				<FaqList faqs={faqs.Questions} />
 			</div>
 		</div>
 	);
