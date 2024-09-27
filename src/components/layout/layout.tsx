@@ -8,11 +8,16 @@ import Footer from "./footer";
 import "./layout.less";
 import homeBuilding from "../../images/building-home.jpg";
 import aboutUsBuilding from "../../images/building-about-us.jpg";
+import strategyBuilding from "../../images/building-white-and-brick.jpg";
+import homeBottomBuilding from "../../images/building-black-rail-balcony.jpg";
+
+
 
 const Layout: React.FC = () => {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
 	const isAboutPage = location.pathname === '/about';
+	const isStrategyPage = location.pathname === '/strategy';
 
 	return (
 		<div className="layout-container">
@@ -26,7 +31,9 @@ const Layout: React.FC = () => {
 			<main className="page-content">
 				<Outlet />
 			</main>
-			{isAboutPage && <MainBanner backgroundImage={aboutUsBuilding} /> }
+			{isHomePage && <MainBanner backgroundImage={homeBottomBuilding} /> }
+			{isAboutPage && <MainBanner backgroundImage={aboutUsBuilding} marginTop="50px" />}
+			{isStrategyPage && <MainBanner backgroundImage={strategyBuilding} marginTop="50px" />}
 			<Footer />
 		</div>
 	);
