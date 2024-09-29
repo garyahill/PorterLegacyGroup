@@ -11,8 +11,6 @@ import aboutUsBuilding from "../../images/building-about-us.jpg";
 import strategyBuilding from "../../images/building-white-and-brick.jpg";
 import homeBottomBuilding from "../../images/building-black-rail-balcony.jpg";
 
-
-
 const Layout: React.FC = () => {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
@@ -24,7 +22,7 @@ const Layout: React.FC = () => {
 			<Header />
 			{isHomePage &&
 				<>
-					<MainBanner bannerItem={getMainImageBannerText()} marginTop={"3px"} backgroundImage={homeBuilding} />
+					<MainBanner bannerItem={getMainImageBannerText()} marginTop={"3px"} backgroundImage={homeBuilding} panning/>
 					<MissionBanner bannerItem={getMissionBannerText()} />
 				</>
 			}
