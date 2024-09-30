@@ -6,13 +6,16 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./invest.less";
 
 const Invest: React.FC = () => {
-	const [formData, setFormData] = useState<InvestmentFormData>(getNewFormDate());
+	const [formData, setFormData] = useState<InvestmentFormData>(getNewFormData());
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const { PageTitle, InvestmentProgramText, GoogleScriptsWebAppUrl } = getInvestmentPageData();
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setIsSubmitting(true);
+
+		const successMessage = "Thank you, We'll be in touch soon!";
+		const errorMessage = "Sorry, there was a problem submitting your information.";
 
 		try {
 		  const response = await fetch(GoogleScriptsWebAppUrl, {
@@ -24,18 +27,18 @@ const Invest: React.FC = () => {
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 		  });
 
-		  const result = await response.text();
+	      const result = await response.text();
 
 		  if (result === "Success") {
-				toast.success("Thank you, We'll be in touch soon!");
+				toast.success(successMessage);
 		  } else {
-				toast.error("Sorry, there was a problem submitting your information.");
+				toast.error(errorMessage);
 		  }
 		} catch (error) {
-			toast.error("An error occurred during submission.");
+			toast.error(errorMessage);
 		} finally {
 			setIsSubmitting(false);
-			setFormData(getNewFormDate);
+			setFormData(getNewFormData());
 		}
 	  };
 
@@ -113,17 +116,39 @@ const Invest: React.FC = () => {
 						<label>Are you an accredited investor?<span className="required">*</span></label>
 						<div className="radio-group">
 							<div className="radio-button-pair">
-								<input type="radio" id="non-accredited" name="Accredited" value="Non-Accredited" required onChange={handleChange} />
+								<input
+									type="radio"
+									id="non-accredited"
+									name="Accredited"
+									value="Non-Accredited"
+									checked={formData.Accredited === "Non-Accredited"}
+									required
+									onChange={handleChange}
+								/>
 								<label htmlFor="non-accredited">Non-accredited</label>
 							</div>
 
 							<div className="radio-button-pair">
-								<input type="radio" id="accredited" name="Accredited" value="Accredited" onChange={handleChange} />
+								<input
+									type="radio"
+									id="accredited"
+									name="Accredited"
+									value="Accredited"
+									checked={formData.Accredited === "Accredited"}
+									onChange={handleChange}
+								/>
 								<label htmlFor="accredited">Accredited</label>
 							</div>
 
 							<div className="radio-button-pair">
-								<input type="radio" id="qualified" name="Accredited" value="Qualified" onChange={handleChange} />
+								<input
+									type="radio"
+									id="qualified"
+									name="Accredited"
+									value="Qualified"
+									checked={formData.Accredited === "Qualified"}
+									onChange={handleChange}
+								/>
 								<label htmlFor="qualified">Qualified</label>
 							</div>
 						</div>
@@ -131,27 +156,62 @@ const Invest: React.FC = () => {
 						<label>Do you have Real Estate Investment Experience?</label>
 						<div className="checkbox-group">
 							<div className="check-box-pair">
-								<input type="checkbox" id="single-family" name="Experience" value="Single-Family" onChange={handleChange} />
+								<input
+									type="checkbox"
+									id="single-family"
+									name="Experience"
+									value="Single-Family"
+									checked={formData.Experience.includes("Single-Family")}
+									onChange={handleChange}
+								/>
 								<label htmlFor="single-family">Single family</label>
 							</div>
 
 							<div className="check-box-pair">
-								<input type="checkbox" id="multi-family-lp" name="Experience" value="Multi-Family-LP" onChange={handleChange} />
+								<input
+									type="checkbox"
+									id="multi-family-lp"
+									name="Experience"
+									value="Multi-Family-LP"
+									checked={formData.Experience.includes("Multi-Family-LP")}
+									onChange={handleChange}
+								/>
 								<label htmlFor="multi-family-lp">Multifamily Limited Partner</label>
 							</div>
 
 							<div className="check-box-pair">
-								<input type="checkbox" id="multi-family-gp" name="Experience" value="Multi-Family-GP" onChange={handleChange} />
+								<input
+									type="checkbox"
+									id="multi-family-gp"
+									name="Experience"
+									value="Multi-Family-GP"
+									checked={formData.Experience.includes("Multi-Family-GP")}
+									onChange={handleChange}
+								/>
 								<label htmlFor="multi-family-gp">Multifamily General Partner</label>
 							</div>
 
 							<div className="check-box-pair">
-								<input type="checkbox" id="co-gp" name="Experience" value="Co-GP" onChange={handleChange} />
+								<input
+									type="checkbox"
+									id="co-gp"
+									name="Experience"
+									value="Co-GP"
+									checked={formData.Experience.includes("Co-GP")}
+									onChange={handleChange}
+								/>
 								<label htmlFor="co-gp">Co-GP</label>
 							</div>
 
 							<div className="check-box-pair">
-								<input type="checkbox" id="reits" name="Experience" value="REITS" onChange={handleChange} />
+								<input
+									type="checkbox"
+									id="reits"
+									name="Experience"
+									value="REITS"
+									checked={formData.Experience.includes("REITS")}
+									onChange={handleChange}
+								/>
 								<label htmlFor="reits">REITs</label>
 							</div>
 
@@ -176,7 +236,7 @@ const Invest: React.FC = () => {
 	);
 };
 
-function getNewFormDate() {
+function getNewFormData() {
 	return {
 		Name: "",
 		Email: "",
