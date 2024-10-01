@@ -5,14 +5,15 @@ import "./main-banner.less";
 type MainBannerProps = {
 	bannerItem?: BannerItem;
 	marginTop?: string;
+	marginBottom?: string;
 	backgroundImage?: string;
 	panning?: boolean;
 };
 
-const Banner: React.FC<MainBannerProps> = ({ bannerItem, marginTop = "0px", backgroundImage, panning = false }) => {
+const Banner: React.FC<MainBannerProps> = ({ bannerItem, marginTop = "0px", marginBottom = "0px", backgroundImage, panning = false }) => {
 	const backgroundStyle = backgroundImage
-		? { backgroundImage: `url(${backgroundImage})`, marginTop }
-		: { marginTop };
+		? { backgroundImage: `url(${backgroundImage})`, marginTop, marginBottom }
+		: { marginTop, marginBottom };
 
 	return (
 		<div className={`main-banner ${panning ? "panning-bg" : undefined}`} style={backgroundStyle} >

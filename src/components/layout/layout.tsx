@@ -29,9 +29,9 @@ const Layout: React.FC = () => {
 			<main className="page-content">
 				<Outlet />
 			</main>
-			{isHomePage && <MainBanner backgroundImage={homeBottomBuilding} /> }
-			{isAboutPage && <MainBanner backgroundImage={aboutUsBuilding} marginTop="50px" />}
-			{isStrategyPage && <MainBanner backgroundImage={strategyBuilding} marginTop="50px" />}
+			{isHomePage && <MainBanner backgroundImage={homeBottomBuilding}  marginBottom="3px"/> }
+			{isAboutPage && <MainBanner backgroundImage={aboutUsBuilding} marginTop="50px"  marginBottom="3px"/>}
+			{isStrategyPage && <MainBanner backgroundImage={strategyBuilding} marginTop="50px" marginBottom="3px" />}
 			<Footer />
 		</div>
 	);
