@@ -2,13 +2,7 @@
 @import "../../../theme/mixins.less";
 
 .carousel-container {
-
     width: 100%;
-    background-color: @accent-grey-50-percent;
-    border-radius: 8px;
-    border: 1px solid @standard-grey;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Drop shadow */
-    height: 160px;
 
     h2 {
         .section-header-h2();
@@ -24,16 +18,32 @@
 
 @media (max-width: 768px) {
     .carousel-container {
-        background-color: unset;
-        border-radius: unset;
-        border: 0px;
-        box-shadow: unset;
         height: 160px;
         position: relative;
         top: -20px;
     
         p {
             height: 60px;
+        }
+    }   
+    
+}
+
+@media (min-width: 768px) {
+    .carousel-container {
+        background-color: @accent-grey;
+        border-radius: 8px;
+        border: 1px solid @standard-grey;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Drop shadow */
+        height: 160px;
+        
+        h2 {
+            font-weight: bold;
+        }
+    
+        p {
+            font-style: italic;
+            font-weight: bold;            
         }
     }
 }
