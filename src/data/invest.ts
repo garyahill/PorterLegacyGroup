@@ -4,7 +4,7 @@ export default function getInvestmentPageData(): InvestmentPageData {
 	const builder: string[] = [];
 
 	const PageTitle = "Invest with Us";
-	const GoogleScriptsWebAppUrl = "https://script.google.com/macros/s/AKfycby9TXFCuWJ4WpnjUeN2Gh8_3RYIuTdkJxCC24QIJSWDyY01G7tjASCrinxVtmkcC0Qg/exec";
+	const GoogleScriptsWebAppUrl = "https://script.google.com/macros/s/AKfycbxzF2sAUyVpWDC3Ozb_InGUMiJmSXppSD1_Me7fDFBvguV7eEEvX_INu9Tb7MvUHXjh/exec";
 
 	builder.push("We are committed to implementing our strategy with diligence and transparency. ");
 	builder.push("We look forward to partnering with investors who share our long-term vision. ");
