@@ -1,12 +1,24 @@
-import { AboutPageData, TeamItem, ValuesItem } from "../models";
+import { AboutPageData, TeamMemberSection, ValuesItem } from "../models";
 
 export default function getAboutPageData(): AboutPageData {
 	let builder: string[] = [];
 
 	// Values Area
-	const valuesAreaTitle = "Our Values";
+	const valuesAreaTitle = "Values";
+	const valuesSummaryItems = [] as string[]; // "Ryan is a huge believer in the Amazon Leadership Principles that have propelled the growth and success of many Amazon businesses. All 14 leadership principles can be seen here.";
 	const valuesItems = [] as ValuesItem[];
 
+	// Values Summary Paragraphs
+	builder = [];
+	builder.push("Ryan is a huge believer in the Amazon Leadership Principles that have propelled the growth and success of many Amazon businesses. ");
+	builder.push("All 14 leadership principles can be seen <a href='https://www.amazon.jobs/content/en/our-workplace/leadership-principles' target='_blank' rel='noopener noreferrer'>here</a>.");
+	valuesSummaryItems.push(builder.join(""));
+
+	builder = [];
+	builder.push("The following 8 values are a focus for Porter Legacy Group and all day-to-day work is guided by these values.");
+	valuesSummaryItems.push(builder.join(""));
+
+	// Values Items
 	builder = [];
 	builder.push("<span class='special-character'>\"</span>Prioritize and obsess over customer needs and satisfaction above all else.<span class='special-character'>\"</span>");
 	valuesItems.push({
@@ -73,27 +85,47 @@ export default function getAboutPageData(): AboutPageData {
 
 
 	// Area Title
-	const teamAreaTitle = "Our Team";
-	const teamItems = [] as TeamItem[];
+	const teamAreaTitle = "About";
+	const teamSections = [] as TeamMemberSection[];
 
 	// Ryan Porter - Info
 	builder = [];
-	builder.push("Ryan Porter is the CEO of Porter Legacy Group. He has over 20 years of experience in the real estate industry. ");
-	builder.push("Ryan has a proven track record of success and is dedicated to providing the highest level of service to our investors.");
-	teamItems.push({
-		SectionTitle: "Ryan Porter",
-		Subtitle: "Managing Partner",
+	builder.push("Ryan is a Principal Consultant with Amazon Web Services (AWS) where he advises Technology Executives of utilities and publicly ");
+	builder.push("traded companies on how to migrate and modernize their infrastructure to the Amazon cloud. Ryan has 25 years of consulting and ");
+	builder.push("technology experience in the San Francisco Bay Area.");
+	teamSections.push({
+		ContentText: builder.join(""),
+	});
+
+	builder = [];
+	builder.push("Ryan grew up in the Real Estate & Investment Industries with his father, <a href='https://www.linkedin.com/in/bruce-a-porter-1b841a5' ");
+	builder.push("target='_blank' rel='noopener noreferrer'>Bruce A. Porter</a> (RE Broker, Retail Investment Advisor & former owner of a Broker Dealer) ");
+	builder.push("and uncles including Davis R. Chant (owner of <a href='https://www.chantre.com/' target='_blank' rel='noopener noreferrer'>Davis R. Chant ");
+	builder.push("Realtors</a> in the Poconos) on both coasts.");
+	teamSections.push({
+		ContentText: builder.join(""),
+	});
+
+	builder = [];
+	builder.push("Ryan began his real estate journey remodeling, renting and flipping apartments in California and Latin America for 10 years. ");
+	builder.push("Over the years Ryan's passion for Real Estate has deepened and he views multifamily as one of the top opportunities to generate ");
+	builder.push("wealth and secure solid risk-adjusted returns.");
+	teamSections.push({
 		ContentText: builder.join(""),
 	});
 
 	return {
 		ValuesData: {
 			ValuesTitle: valuesAreaTitle,
+			ValuesSummaryItems: valuesSummaryItems,
 			ValuesItems: valuesItems,
 		},
 		TeamData: {
 			TeamTitle: teamAreaTitle,
-			TeamItems: teamItems,
+			MemberName: "Ryan B. Porter",
+			MemberLinkedIn: "https://www.linkedin.com/in/ryanbporter/",
+			TeamMemberSections: teamSections as ReadonlyArray<TeamMemberSection>,
 		},
 	} as AboutPageData;
 }
+

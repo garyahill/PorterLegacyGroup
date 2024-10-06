@@ -1,0 +1,30 @@
+@import "../../../theme/palette.less";
+
+.values-summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+
+    p {
+        text-align: center;
+    }
+
+    a {
+        color: @inline-link;
+        text-decoration: none;
+
+        &:hover {
+            color: @inline-link;
+        }
+    }
+
+    @media (min-width: 768px) {
+        p {
+            width: 70%;
+        }
+        
+    }
+}

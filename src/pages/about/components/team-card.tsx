@@ -1,25 +1,47 @@
 import React from "react";
 import "./team-card.less";
+import { TeamMemberSection } from "../../../models";
 
 interface TeamCardProps {
 	title: string;
-	subtitle: string;
-	content: string;
+	memberName: string;
+	memberLinkedIn: string;
 	logo: string;
+	teamMemberSections: ReadonlyArray<TeamMemberSection>;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ title, subtitle, content, logo }) => {
+const TeamCard: React.FC<TeamCardProps> = ({ logo, memberName, teamMemberSections }) => {
 	return (
 		<section className="team-card-container">
-			<div className="logo-container">
-				<img src={logo} alt="photo" className="section-logo" />
+
+			<div className="outer-logo-container">
+		  		<img src={logo} alt="Logo" className="section-logo" />
 			</div>
-			<div className="text-container">
-				<h2 className={"section-title"}>{title}</h2>
-				<h3 className={"section-subtitle"}>{subtitle}</h3>
-				<p className="section-text">{content}</p>
+
+			{/* Title and Text stacked on the right */}
+			<div className="content-container">
+
+				<div className="title-container">
+					<h3 className="section-subtitle">{memberName}</h3>
+				</div>
+
+				<div className="inner-logo-container">
+		  			<img src={logo} alt="Logo" className="section-logo" />
+				</div>
+
+				<div className="text-container">
+					{teamMemberSections.map((section, index) => (
+						<p
+							key={index}
+							className="section-content"
+							dangerouslySetInnerHTML={{ __html: section.ContentText }}
+						>
+						</p>
+					))}
+				</div>
+
 			</div>
-		</section>
+	  </section>
 	);
 };
 
