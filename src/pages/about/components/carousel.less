@@ -21,7 +21,6 @@
         height: 160px;
         position: relative;
         top: -20px;
-    
         p {
             height: 60px;
         }
@@ -29,7 +28,14 @@
     
 }
 
-@media (min-width: 768px) {
+@media screen and (width: 768px) {
+    .slick-dots {
+       position: relative;
+       top: 120px;
+    }  
+}
+
+@media (min-width: 769px) {
     .carousel-container {
         background-color: @accent-grey;
         border-radius: 8px;
@@ -47,3 +53,4 @@
         }
     }
 }
+
