@@ -5,7 +5,7 @@ export default function getAboutPageData(): AboutPageData {
 
 	// Values Area
 	const valuesAreaTitle = "Values";
-	const valuesSummaryItems = [] as string[]; // "Ryan is a huge believer in the Amazon Leadership Principles that have propelled the growth and success of many Amazon businesses. All 14 leadership principles can be seen here.";
+	const valuesSummaryItems = [] as string[];
 	const valuesItems = [] as ValuesItem[];
 
 	// Values Summary Paragraphs
@@ -20,64 +20,63 @@ export default function getAboutPageData(): AboutPageData {
 
 	// Values Items
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Prioritize and obsess over customer needs and satisfaction above all else.<span class='special-character'>\"</span>");
+	builder.push("\"Prioritize and obsess over customer needs and satisfaction above all else.\"");
 	valuesItems.push({
 		SectionTitle: "Customer Obsession",
 		SectionText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Meet established objectives by delivering high-quality products or services in a timely and consistent manner.<span class='special-character'>\"</span>");
+	builder.push("\"Meet established objectives by delivering high-quality products or services in a timely and consistent manner.\"");
 	valuesItems.push({
 		SectionTitle: "Deliver Results",
 		SectionText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Build solid relationships based on transparency<span class='special-character'>,</span> honesty and mutual respect.<span class='special-character'>\"</span>");
+	builder.push("\"Build solid relationships based on transparency, honesty and mutual respect.\"");
 	valuesItems.push({
 		SectionTitle: "Earn Trust",
 		SectionText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Maximize available resources and find efficient ways to achieve results without overspending.<span class='special-character'>\"</span>");
+	builder.push("\"Maximize available resources and find efficient ways to achieve results without overspending.\"");
 	valuesItems.push({
 		SectionTitle: "Frugality",
 		SectionText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Prioritize quick decision-making and action over procrastination and over-analysis.<span class='special-character'>\"</span>");
+	builder.push("\"Prioritize quick decision-making and action over procrastination and over-analysis.\"");
 	valuesItems.push({
 		SectionTitle: "Bias for Action",
 		SectionText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Have a bold and ambitious vision that inspires meaningful actions and results.<span class='special-character'>\"</span>");
+	builder.push("\"Have a bold and ambitious vision that inspires meaningful actions and results.\"");
 	valuesItems.push({
 		SectionTitle: "Think Big",
 		SectionText: builder.join(""),
 	});
 
-	///
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Set exceptional quality standards and demand their fulfillment in all areas of work.<span class='special-character'>\"</span>");
+	builder.push("\"Set exceptional quality standards and demand their fulfillment in all areas of work.\"");
 	valuesItems.push({
 		SectionTitle: "Insist on the Highest Standards",
 		SectionText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Maintain a mindset of constant learning and always be open to new ideas and perspectives.<span class='special-character'>\"</span>");
+	builder.push("\"Maintain a mindset of constant learning and always be open to new ideas and perspectives.\"");
 	valuesItems.push({
 		SectionTitle: "Learn and Be Curious",
 		SectionText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("<span class='special-character'>\"</span>Encourage innovation and creativity<span class='special-character'>,</span> and seek ways to simplify processes and solutions.<span class='special-character'>\"</span>");
+	builder.push("\"Encourage innovation and creativity, and seek ways to simplify processes and solutions.\"");
 	valuesItems.push({
 		SectionTitle: "Invent and Simplify",
 		SectionText: builder.join(""),

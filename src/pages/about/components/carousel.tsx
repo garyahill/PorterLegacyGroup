@@ -32,7 +32,7 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
 					{data.ValuesItems.map((item, index) => (
 						<div key={index}>
 							<h2>{item.SectionTitle}</h2>
-							<p dangerouslySetInnerHTML={{ __html: item.SectionText }}></p>
+							<p>{item.SectionText}</p>
 						</div>
 					))}
 				</Slider>

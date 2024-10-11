@@ -17,11 +17,7 @@ const FaqItem = (props: FaqItemProps) => {
 				<h2>{Question.Question}</h2>
 				<div className={`icon ${Open ? "open" : ""}`} onClick={ OnClick }></div>
 			</div>
-			<div
-				key={`Key_Answer_${Index}`}
-				className={`answer ${Open ? "open" : ""}`}
-				dangerouslySetInnerHTML={{ __html: Question.Answer }}>
-			</div>
+			<div key={`Key_Answer_${Index}`} className={`answer ${Open ? "open" : ""}`}>{Question.Answer}</div>
 		</>
 	);
 };

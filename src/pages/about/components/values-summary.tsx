@@ -9,7 +9,7 @@ const ValuesSummary: React.FC<ValuesSummaryProps> = ({ items }) => {
 	return (
 		<div className="values-summary-container">
 			{items.map((item, index) => (
-				<p key={index} dangerouslySetInnerHTML={{ __html: item }}></p>
+				<p key={index}>{item}</p>
 			))}
 		</div>
 	);

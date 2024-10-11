@@ -9,24 +9,25 @@ export default function getStrategyPageData(): StrategyPageData {
 	const Sections = [] as StrategyPageSection[];
 
 	builder = [];
-	builder.push("Acquire Class B & C \"value-add\" apartment buildings in the State of Texas<span class='special-character'>,</span> preferably in the Dallas-Fort Worth (DFW). ");
-	builder.push("Then<span class='special-character'>,</span> Invest in the property and its amenities through capital improvements.");
+	builder.push("Acquire Class B & C \"value-add\" apartment buildings in the State of Texas, preferably in the ");
+	builder.push("Dallas-Fort Worth (DFW). Then, Invest in the property and its amenities through capital improvements.");
 	Sections.push({
 		Title: "1. Invest & Add-Value",
 		ContentText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("After renovations and improvements<span class='special-character'>,</span> we seek to maintain or achieve 95<span class='special-character'>%</span> ");
-	builder.push("occupancy and 95<span class='special-character'>%</span> market rents within 36 months.");
+	builder.push("After renovations and improvements, we seek to maintain or achieve 95% ");
+	builder.push("occupancy and 95% market rents within 36 months.");
 	Sections.push({
 		Title: "2. Increase Income & Occupancy",
 		ContentText: builder.join(""),
 	});
 
 	builder = [];
-	builder.push("During the hold period<span class='special-character'>,</span> we seek to pay investors 9<span class='special-character'>%</span> monthly preferred returns with an additional goal of returning investor capital prior to selling. ");
-	builder.push("Investors will maintain their equity position in the asset and continue to earn preferred returns until divestiture.");
+	builder.push("During the hold period, we seek to pay investors 9% monthly preferred returns with an additional ");
+	builder.push("goal of returning investor capital prior to selling. Investors will maintain their equity position ");
+	builder.push("in the asset and continue to earn preferred returns until divestiture.")
 	Sections.push({
 		Title: "3. Pay Investor Preferred Returns & Equity",
 		ContentText: builder.join(""),

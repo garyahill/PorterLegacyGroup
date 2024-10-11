@@ -31,12 +31,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ logo, memberName, teamMemberSection
 
 				<div className="text-container">
 					{teamMemberSections.map((section, index) => (
-						<p
-							key={index}
-							className="section-content"
-							dangerouslySetInnerHTML={{ __html: section.ContentText }}
-						>
-						</p>
+						<p key={index} className="section-content">{section.ContentText}</p>
 					))}
 				</div>
 
