@@ -17,7 +17,7 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 5000,
-		arrows: true,
+		arrows: false,
 		pauseOnHover: true,
 		adaptiveHeight: true,  // Ensure height adapts to content
 		variableWidth: false,

@@ -1,6 +1,6 @@
 import type { HomePageData, HomePageSection } from "./home-page";
 import type { StrategyPageData, StrategyPageSection } from "./strategy-page";
-import type { AboutPageData, ValuesData, TeamData, ValuesItem, TeamMemberSection } from "./about";
+import type { AboutPageData, ValuesData, TeamData, ValuesItem } from "./about";
 import type { InvestmentPageData, InvestmentFormData } from "./investment-page";
 import type { FaqPageData, Question } from "./faq-page";
 import type { BannerItem } from "./banners";
@@ -12,7 +12,6 @@ export type {
 	StrategyPageSection,
 	AboutPageData,
 	ValuesItem,
-	TeamMemberSection,
 	ValuesData,
 	TeamData,
 	FaqPageData,

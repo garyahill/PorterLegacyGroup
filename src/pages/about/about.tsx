@@ -10,7 +10,7 @@ import ValuesSummary from "./components/values-summary";
 
 const Team: React.FC = () => {
 	const { TeamData, ValuesData } = getAboutPageData();
-	const { MemberName, MemberLinkedIn, TeamTitle, TeamMemberSections} = TeamData;
+	const { MemberName, MemberLinkedIn, TeamTitle } = TeamData;
 
 	return (
 		<div className="about-container">
@@ -22,8 +22,7 @@ const Team: React.FC = () => {
 							title={TeamTitle}
 							memberName={MemberName}
 							memberLinkedIn={MemberLinkedIn}
-							logo={ryan}
-							teamMemberSections={TeamMemberSections}
+							picture={ryan}
 						/>
 					}
 				</div>
@@ -31,8 +30,10 @@ const Team: React.FC = () => {
 
 			<div className="values-container">
 				<h1>{ValuesData.ValuesTitle}</h1>
-				<ValuesSummary items={ValuesData.ValuesSummaryItems} />
-				<Carousel data={ValuesData} />
+				<div className="outline-container">
+					<ValuesSummary items={ValuesData.ValuesSummaryItems} />
+					<Carousel data={ValuesData} />
+				</div>
 			</div>
 		</div>
 	);

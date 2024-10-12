@@ -12,6 +12,10 @@
         text-align: left;
     }
 
+    p:first-child {
+        margin-top: 0px;
+    }
+
     a {
         color: @inline-link;
         text-decoration: none;
@@ -23,8 +27,18 @@
 
     @media (min-width: 769px) {
         padding: 0;
+
         p {
-            width: 70%;
+            width: 80%;
+            text-align: center;
+        }
+
+        p:first-child {
+            margin-top: 30px;
+        }
+        
+        p:last-child {
+            margin-bottom: -10px;
         }
         
     }

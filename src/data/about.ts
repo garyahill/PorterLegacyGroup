@@ -1,4 +1,4 @@
-import { AboutPageData, TeamMemberSection, ValuesItem } from "../models";
+import { AboutPageData, ValuesItem } from "../models";
 
 export default function getAboutPageData(): AboutPageData {
 	let builder: string[] = [];
@@ -85,33 +85,6 @@ export default function getAboutPageData(): AboutPageData {
 
 	// Area Title
 	const teamAreaTitle = "About";
-	const teamSections = [] as TeamMemberSection[];
-
-	// Ryan Porter - Info
-	builder = [];
-	builder.push("Ryan is a Principal Consultant with Amazon Web Services (AWS) where he advises Technology Executives of utilities and publicly ");
-	builder.push("traded companies on how to migrate and modernize their infrastructure to the Amazon cloud. Ryan has 25 years of consulting and ");
-	builder.push("technology experience in the San Francisco Bay Area.");
-	teamSections.push({
-		ContentText: builder.join(""),
-	});
-
-	builder = [];
-	builder.push("Ryan grew up in the Real Estate & Investment Industries with his father, <a href='https://www.linkedin.com/in/bruce-a-porter-1b841a5' ");
-	builder.push("target='_blank' rel='noopener noreferrer'>Bruce A. Porter</a> (RE Broker, Retail Investment Advisor & former owner of a Broker Dealer) ");
-	builder.push("and uncles including Davis R. Chant (owner of <a href='https://www.chantre.com/' target='_blank' rel='noopener noreferrer'>Davis R. Chant ");
-	builder.push("Realtors</a> in the Poconos) on both coasts.");
-	teamSections.push({
-		ContentText: builder.join(""),
-	});
-
-	builder = [];
-	builder.push("Ryan began his real estate journey remodeling, renting and flipping apartments in California and Latin America for 10 years. ");
-	builder.push("Over the years Ryan's passion for Real Estate has deepened and he views multifamily as one of the top opportunities to generate ");
-	builder.push("wealth and secure solid risk-adjusted returns.");
-	teamSections.push({
-		ContentText: builder.join(""),
-	});
 
 	return {
 		ValuesData: {
@@ -123,7 +96,6 @@ export default function getAboutPageData(): AboutPageData {
 			TeamTitle: teamAreaTitle,
 			MemberName: "Ryan B. Porter",
 			MemberLinkedIn: "https://www.linkedin.com/in/ryanbporter/",
-			TeamMemberSections: teamSections as ReadonlyArray<TeamMemberSection>,
 		},
 	} as AboutPageData;
 }

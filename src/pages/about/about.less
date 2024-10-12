@@ -21,10 +21,16 @@
         }
     }
 
-    @media(max-width: 768px) {
+    @media  (min-width: 769px) {
         .values-container {
-            margin-bottom: 30px;
+            .outline-container {
+                border: 1px solid @standard-grey;
+                background-color: @accent-grey;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Drop shadow */
+                border-radius: 8px;
+            }
         }
+        
     }
 
     // Laptop and smaller desktop
